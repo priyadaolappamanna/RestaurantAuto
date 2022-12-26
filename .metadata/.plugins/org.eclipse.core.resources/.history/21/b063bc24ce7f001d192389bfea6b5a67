@@ -1,0 +1,82 @@
+package com.Restaurant.Pageobjects;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.Restaurant.Baseclass.BaseClass;
+
+public class ReportsPage extends BaseClass{
+	
+public ReportsPage()
+{
+	PageFactory.initElements(getDriver(), this);
+}
+//reports button
+@FindBy(xpath="//span[contains(text(),'Reports')]")
+WebElement Reports;
+
+//top 5 products
+@FindBy(xpath="//h3[contains(text(),'Top 5 Products this year')]")
+WebElement Top5Prod;
+//Client Stat
+@FindBy(xpath="//h3[text()='Clients Stats']")
+WebElement ClientsStat;
+//selectclient Dropdown
+@FindBy(xpath="(//b[@role='presentation'])[1]")
+WebElement SelectClientDrop;
+//Calander of client
+@FindBy(xpath="//input[@id='CustomerRange']")
+WebElement ClientCalender;
+//report of client
+@FindBy(xpath="(//button[contains(text(),'Get Report')])[1]")
+WebElement ClientReport;
+//prod Status
+@FindBy(xpath="(//span[@role='presentation'])[2]")
+WebElement ProductStatus;
+
+
+public WebElement Report()
+{
+	return Reports;
+}
+public WebElement TopProducts()
+{
+	return Top5Prod;
+	
+}
+public WebElement Clientstat()
+{
+	return ClientsStat;
+}
+public WebElement ClientDrop()
+{
+	return SelectClientDrop;
+}
+public WebElement ClientCal()
+{
+	return ClientCalender;
+}
+public WebElement ClientRep()
+{
+	return ClientReport;
+}
+public WebElement Producttat()
+{
+	return ProductStatus;
+}
+public void ClickOnReports()
+{
+	action.click1(Reports, "Clicking on Reports");
+}
+public void ClickOnSelectProduct()
+{
+	action.moveToElement(getDriver(), ClientsStat);
+	action.click1(SelectClientDrop, "Clicking on Select Product");
+}
+public Boolean IsTop5ProductsPresent()
+{
+	return action.isDisplayed(getDriver(), Top5Prod);
+}
+
+}

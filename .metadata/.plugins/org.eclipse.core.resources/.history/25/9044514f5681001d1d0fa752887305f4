@@ -1,0 +1,66 @@
+package com.Restaurant.Testcases;
+
+import static org.testng.Assert.assertTrue;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.Restaurant.Baseclass.BaseClass;
+import com.Restaurant.Pageobjects.LogInpage;
+import com.Restaurant.Pageobjects.PeopleAddSupplierPage;
+import com.Restaurant.Pageobjects.StoresPage;
+import com.Restaurant.Utilities.Log;
+
+public class VerifyStoresPageTest extends BaseClass {
+	@Test(priority=1)
+	public void VerifyAddStore() throws InterruptedException
+	{
+		Log.startTestCase("VerifyAddStorePage");
+		LogInpage Lp1=new LogInpage();
+		Lp1.ValidLogin();
+		StoresPage sp=new StoresPage();
+		sp.ClickOnStores();
+		Assert.assertTrue(sp.IsAddStorePresent(),"The store page is not loaded");
+		Thread.sleep(3000);
+		sp.ClickOnAddStore();
+		Thread.sleep(3000);
+		Assert.assertTrue(sp.IsAddFormHeaderPresent(),"add form header is present");
+		sp.FillAddStoreForm();
+		Thread.sleep(2000);
+		sp.ClickOnSubmit();
+		Thread.sleep(3000);
+		Assert.assertTrue(sp.SearchStores(),"Add store is not happened");
+		Log.endTestCase("VerifyAddStorePage");
+		}
+	@Test(priority=2)
+	
+	public void verifyeditstore() throws InterruptedException
+	{
+		Log.startTestCase("VerifyEditPageTest");
+		LogInpage Lp1=new LogInpage();
+		Lp1.ValidLogin();
+		StoresPage sp=new StoresPage();
+		sp.EditStores();
+		Thread.sleep(3000);
+		Assert.assertTrue(sp.IsEditStoresBackButonPresent(),"not showing backbutton");
+		sp.ClickOnSubmit();
+		Assert.assertTrue(sp.ConfirmEdit(),"field is not edited");	
+		Log.endTestCase("VerifyEditPageTest");
+		
+	}
+	@Test(priority=3)
+	public void verifyStoreDelete() throws InterruptedException
+	{
+		Log.startTestCase("VerifyStoredeletePageTest");
+		LogInpage Lp1=new LogInpage();
+		Lp1.ValidLogin();
+		StoresPage sp=new StoresPage();
+		Thread.sleep(3000);
+		sp.StoreDelete();
+		Assert.assertTrue(sp.StoreDelete(),"not deleted");
+		Log.endTestCase("VerifyStoredeletePageTest");
+		
+		
+	}
+
+}

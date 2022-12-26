@@ -1,0 +1,62 @@
+package com.Restaurant.Testcases;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.Restaurant.Baseclass.BaseClass;
+import com.Restaurant.Pageobjects.PeopleAddCustomerPage;
+import com.Restaurant.Pageobjects.LogInpage;
+import com.Restaurant.Pageobjects.PeopleAddWaiterPage;
+import com.Restaurant.Utilities.Log;
+
+public class VerifyPeopleAddCustomerPageTest extends BaseClass {
+	@Test(priority=1)
+	public void VerifyCustPage() throws InterruptedException
+	{
+	Log.startTestCase("VerifyCustomerPage");
+	lp.ValidLogin();
+	c2.FillAddCustomerForm();
+	//Thread.sleep(3000);
+	Assert.assertTrue(c2.IsAddCustomerPresent(),"not showing addcustomers");
+	Assert.assertTrue(c2.SearchCustomers(),"field is not added");	
+	Log.endTestCase("VerifyCustomerPage");
+	}
+	
+	@Test(priority=2)
+	public void verifyeditcustomer() throws InterruptedException
+	{
+		Log.startTestCase("VerifyPeopleEditCustomerPageTest");
+		lp.ValidLogin();
+		c2.EditCustomers();
+		//Thread.sleep(3000);
+		Assert.assertTrue(c2.IsEditCustBackButonPresent(),"not showing backbutton");
+		Assert.assertTrue(c2.ConfirmEdit(),"field is not edited");	
+		Log.endTestCase("VerifyPeopleAddWaiterPageTest");
+		
+	}
+	@Test(priority=4)
+	public void verifyselectnum() throws InterruptedException
+	{
+		Log.startTestCase("VerifyPeopleEditCustomerPageTest");
+		lp.ValidLogin();
+		c2.ClickOnPeople();
+	    c2.ClickOnCustomers();
+		c2.SelectNum();
+		Assert.assertTrue(c2.IsCustomersshowentriesPresent(),"Show entries not present");
+		//Thread.sleep(3000);
+		Log.endTestCase("VerifyPeopleAddWaiterPageTest");
+		
+	}
+	@Test(priority=3)
+	public void VerifyCustomerDelete() throws InterruptedException
+	{
+		Log.startTestCase("VerifyPeopleDeleteCustomerPageTest");
+		lp.ValidLogin();
+	//	Thread.sleep(3000);
+		c2.CustomerDelete();
+		Assert.assertTrue(c2.CustomerDelete(),"not deleted");
+		Log.endTestCase("VerifyPeopleDeleteCustomerPageTest");
+	}
+	
+
+}

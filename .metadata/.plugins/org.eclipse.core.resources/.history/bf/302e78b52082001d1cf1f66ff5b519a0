@@ -1,0 +1,69 @@
+package com.Restaurant.Testcases;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.Restaurant.Baseclass.BaseClass;
+import com.Restaurant.Pageobjects.LogInpage;
+import com.Restaurant.Pageobjects.PeopleAddWaiterPage;
+import com.Restaurant.Utilities.Log;
+
+public class VerifyPeopleAddWaiterPageTest extends BaseClass {
+	@Test(priority=1)
+
+	public void VerifyWaiterAdd() throws InterruptedException
+	{
+	Log.startTestCase("VerifyPeopleAddWaiterPageTest");
+	lp.ValidLogin();
+	p1.ClickOnPeople();
+	p1.ClickOnWaiters();
+	Assert.assertTrue(p1.IsAddWaitersPresent(),"not showing addwaiters");
+	p1.ClickOnAddWaiter();
+	Thread.sleep(3000);
+	Assert.assertTrue(p1.IsFormHeaderPresent(),"not showing formheader");
+	Thread.sleep(3000);
+	p1.FillAddWaiterForm();
+	p1.SelectStore();
+	Thread.sleep(3000);
+	p1.ClickOnSubmit();
+	Assert.assertTrue(p1.SearchWaiters(),"field is not added");
+	Log.endTestCase("VerifyPeopleAddWaiterPageTest");
+
+	}
+	@Test(priority=2)
+	public void verifyeditwaiter() throws InterruptedException
+	{
+	Log.startTestCase("VerifyPeopleAddWaiterPageTest");
+	lp.ValidLogin();
+	p1.EditWaiters();
+	Assert.assertTrue(p1.IsEdiWaitersBackButonPresent(),"not showing backbutton");
+	p1.ClickOnSubmit();
+	Assert.assertTrue(p1.ConfirmEdit(),"field is not edited");
+	Log.endTestCase("VerifyPeopleAddWaiterPageTest");
+
+	}
+	@Test(priority=4)
+	public void verifyselectnum() throws InterruptedException
+	{
+	Log.startTestCase("VerifyPeopleAddWaiterPageTest");
+	lp.ValidLogin();
+	p1.ClickOnPeople();
+	p1.ClickOnWaiters();
+	p1.SelectNum();
+	Assert.assertTrue(p1.IsWaitershowentriesPresent(),"Show entries not present");
+	Log.endTestCase("VerifyPeopleAddWaiterPageTest");
+
+	}
+	@Test(priority=3)
+	public void WaiterDelete() throws InterruptedException
+	{
+	Log.startTestCase("VerifyPeopleAddWaiterPageTest");
+	lp.ValidLogin();
+	p1.WaiterDelete();
+	Assert.assertTrue(p1.WaiterDelete(),"not deleted");
+	Log.endTestCase("VerifyPeopleAddWaiterPageTest");
+	}
+
+	
+}

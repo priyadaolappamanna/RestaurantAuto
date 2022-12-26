@@ -1,0 +1,27 @@
+package com.Restaurant.Testcases;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.Restaurant.Baseclass.BaseClass;
+import com.Restaurant.Pageobjects.LogInpage;
+import com.Restaurant.Pageobjects.PeopleAddCustomerPage;
+import com.Restaurant.Pageobjects.SalesPage;
+import com.Restaurant.Utilities.Log;
+
+public class VerifySalesPageTest extends BaseClass {
+@Test
+public void VerifySales() throws InterruptedException
+{
+	Log.startTestCase("VerifySalesPageTest");
+	//LogInpage Lp2=new LogInpage();
+	lp.ValidLogin();
+	SalesPage s2=new SalesPage();
+	s2.ClickonSales();
+	Assert.assertTrue(s2.IsSalesPresent(),"Sales page is not loaded");
+	Thread.sleep(3000);
+	Log.endTestCase("VerifySalesPageTest");
+	
+	
+	}
+}

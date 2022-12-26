@@ -1,0 +1,28 @@
+package com.Restaurant.Testcases;
+
+import java.util.ArrayList;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.Restaurant.Baseclass.BaseClass;
+import com.Restaurant.Pageobjects.LogInpage;
+import com.Restaurant.Pageobjects.PeopleAddCustomerPage;
+import com.Restaurant.Pageobjects.SalesPage;
+import com.Restaurant.Utilities.Log;
+
+public class VerifySalesPageTest extends BaseClass {
+@Test
+public void VerifySales() throws Exception 
+{
+	Log.startTestCase("VerifySalesPageTest");
+	lp.ValidLogin();
+	s2.ClickonSales();
+	Assert.assertTrue(s2.IsSalesPresent(),"Sales page is not loaded");
+	ArrayList Excel=re.getData("Login");
+	System.out.println(Excel.get(1));
+	Log.endTestCase("VerifySalesPageTest");
+			}
+
+
+}

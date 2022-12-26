@@ -1,0 +1,29 @@
+package com.Restaurant.Pageobjects;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.Restaurant.Baseclass.BaseClass;
+
+public class ExpensePage extends BaseClass{
+	public void ExpensePae()
+	{
+		PageFactory.initElements(getDriver(), this);
+	}
+	//Expense button
+@FindBy(xpath="//span[contains(text(),'Expense')]")
+WebElement expense;
+//expense head for assertion
+@FindBy(xpath="//h3[text()='Expence']")
+WebElement ExpHeader;
+
+public WebElement ExpButton()
+{
+return expense;	
+}
+public WebElement ExpHead()
+{
+return ExpHeader;	
+}
+}

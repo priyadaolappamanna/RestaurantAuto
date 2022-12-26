@@ -1,0 +1,202 @@
+package com.Restaurant.Pageobjects;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.Restaurant.Baseclass.BaseClass;
+
+public class StoresPage extends BaseClass {
+public StoresPage()
+{
+	PageFactory.initElements(getDriver(), this);
+	}
+//store head
+@FindBy(xpath="//span[contains(text(),'Stores')]")
+WebElement StoreHeader;
+//add store button
+@FindBy(xpath="//button[contains(text(),'Add Store')]")
+WebElement AddStoreBtn;
+//Add Form Header
+@FindBy(xpath="//h4[contains(text(),'Add Store')]")
+WebElement AddFormHeader;
+//store name
+@FindBy(xpath="//input[@name='name']")
+WebElement StoreName;
+//store storename
+@FindBy(id="email")
+WebElement StoreEmail;
+//storephonenumber
+@FindBy(id="StorePhone")
+WebElement StorePhone;
+//storecountry
+@FindBy(id="Country")
+WebElement StoreCountry;
+//Store StoreCity
+@FindBy(id="City")
+WebElement StoreCity;
+@FindBy (name="adresse")
+WebElement StoreAddress;
+//footer
+@FindBy(xpath="//input[@name='footer_text']")
+WebElement ReceiptFooter;
+//submit form
+@FindBy(xpath="//button[@type='submit']")
+WebElement Submit;
+//search button
+@FindBy (xpath="//input[@type='search']")
+WebElement Searchbtn;
+//Searchresult
+@FindBy(xpath="//td[contains(text(),'OMStores')]")
+WebElement SearchResult;
+//edit button
+@FindBy(xpath="//i[@class='fa fa-pencil']")
+WebElement EditButton;
+//BackButton
+@FindBy(xpath="//a[@class='btn btn-default float-right']")
+WebElement BackButton;
+//delete button 
+@FindBy(xpath="//a[@data-original-title='Delete']")
+WebElement Delete;
+//No match records
+@FindBy(xpath="//td[contains(text(),'No matching records found')]")
+WebElement Nomatch;
+public WebElement Stores()
+{
+	return StoreHeader;
+	
+}
+public WebElement AddStoreButton()
+{
+return AddStoreBtn;	
+}
+public WebElement AddFormHeader()
+{
+	return AddFormHeader;
+	}
+public WebElement StoreName()
+{
+	return StoreName;
+	}
+public WebElement StoreEmail()
+{
+	return StoreEmail;
+	}
+public WebElement Storephone()
+{
+	return StorePhone;
+	}
+public WebElement StoreCountry()
+{
+	return StoreCountry;
+	}
+public WebElement StoreCity()
+{
+	return StoreCity;
+	}
+public WebElement StoreAddres()
+{
+	return StoreAddress;
+	}
+public WebElement Footer()
+{
+	return ReceiptFooter;
+	}
+public WebElement Search()
+{
+	return Searchbtn;
+	
+}
+public WebElement SearchResult()
+{
+	return SearchResult;
+}
+public WebElement EditButton()
+{
+return EditButton;	
+}
+public WebElement BackButton()
+{
+	return BackButton;
+}
+public WebElement Deletebtn()
+{
+return Delete;	
+}
+public WebElement Nomatchrecords()
+{
+	return Nomatch;
+}
+public void ClickOnStores()
+{
+	action.click1(StoreHeader, "Clicking on Stores");
+	}
+
+public boolean IsAddStorePresent()
+{
+	action.moveToElement(getDriver(), AddStoreBtn);
+	return action.isDisplayed(getDriver(), AddStoreBtn);
+}
+public void ClickOnAddStore()
+{
+	action.moveToElement(getDriver(), AddStoreBtn);
+	action.click1(AddStoreBtn, "Clicking on AddStore");
+	}
+public boolean IsAddFormHeaderPresent()
+{
+	return action.isDisplayed(getDriver(), AddFormHeader);
+}
+public void FillAddStoreForm()
+{
+	action.type(StoreName, "OMStores");
+	action.type(StoreEmail,"omstores@gmail.com");
+	action.type(StorePhone, "09923423244");
+	action.type(StoreCountry, "Oman");
+	action.type(StoreCity,"Muscat");
+	action.type(StoreAddress, "WadiKhabir");
+	action.type(ReceiptFooter, "OMStores----");
+	
+	}
+public void ClickOnSubmit()
+{
+	action.click1(Submit, "Clicking on submit button");
+}
+public boolean SearchStores()
+{
+	
+	action.click1(Searchbtn, "Clicking on search");
+	action.type(Searchbtn, "OMStores");
+	String Result=SearchResult.getText();
+	 boolean status=false;
+	 if(Result.equalsIgnoreCase("OMStores"))
+	 {
+		 status=true;
+	 }
+	return status;	
+}
+public void EditStores() {
+	ClickOnStores();
+	
+	action.click1(Searchbtn, "clicking on search");
+	action.type(Searchbtn, "Muscat");
+	action.click1(EditButton, "click to edit athul");
+	action.type(StoreCountry, "India");
+	
+}
+public boolean ConfirmEdit()
+{
+	String Res=StoreCountry.getText();
+	boolean statuc=false;
+	if(StoreCountry.getText().equalsIgnoreCase("India"));
+	{
+		statuc=true;
+	}
+	return statuc;
+	
+}
+public boolean IsEditStoresBackButonPresent() {
+	return action.isDisplayed(getDriver(), BackButton);
+
+}
+
+}

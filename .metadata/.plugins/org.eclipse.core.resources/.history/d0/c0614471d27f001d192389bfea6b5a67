@@ -1,0 +1,14 @@
+package com.Restaurant.Testcases;
+
+import org.testng.annotations.Test;
+
+import com.Restaurant.Baseclass.BaseClass;
+
+public class VerifyReportPageTest extends BaseClass{
+	@Test
+	public void VerifyReortPage()
+	{
+		
+	}
+
+}

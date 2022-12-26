@@ -1,0 +1,24 @@
+package com.Restaurant.Testcases;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.Restaurant.Baseclass.BaseClass;
+import com.Restaurant.Pageobjects.LogInpage;
+import com.Restaurant.Pageobjects.PeopleAddCustomerPage;
+import com.Restaurant.Pageobjects.SalesPage;
+import com.Restaurant.Utilities.Log;
+
+public class VerifySalesPageTest extends BaseClass {
+@Test
+public void VerifySales() 
+{
+	Log.startTestCase("VerifySalesPageTest");
+	lp.ValidLogin();
+	s2.ClickonSales();
+	Assert.assertTrue(s2.IsSalesPresent(),"Sales page is not loaded");
+	Log.endTestCase("VerifySalesPageTest");
+	
+	
+	}
+}

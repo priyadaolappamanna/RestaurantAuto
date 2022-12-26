@@ -1,0 +1,118 @@
+package com.Restaurant.Pageobjects;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.Restaurant.Baseclass.BaseClass;
+
+public class StoresPage extends BaseClass {
+public StoresPage()
+{
+	PageFactory.initElements(getDriver(), this);
+	}
+//store head
+@FindBy(xpath="//span[contains(text(),'Stores')]")
+WebElement StoreHeader;
+//add store button
+@FindBy(xpath="//button[contains(text(),'Add Store')]")
+WebElement AddStoreBtn;
+//Add Form Header
+@FindBy(xpath="//h4[contains(text(),'Add Store')]")
+WebElement AddFormHeader;
+//store name
+@FindBy(xpath="//input[@name='name']")
+WebElement StoreName;
+//store storename
+@FindBy(id="email")
+WebElement StoreEmail;
+//storephonenumber
+@FindBy(id="StorePhone")
+WebElement StorePhone;
+//storecountry
+@FindBy(id="Country")
+WebElement StoreCountry;
+//Store StoreCity
+@FindBy(id="City")
+WebElement StoreCity;
+@FindBy (name="adresse")
+WebElement StoreAddress;
+//footer
+@FindBy(xpath="//input[@name='footer_text']")
+WebElement ReceiptFooter;
+
+public WebElement Stores()
+{
+	return StoreHeader;
+	
+}
+public WebElement AddStoreButton()
+{
+return AddStoreBtn;	
+}
+public WebElement AddFormHeader()
+{
+	return AddFormHeader;
+	}
+public WebElement StoreName()
+{
+	return StoreName;
+	}
+public WebElement StoreEmail()
+{
+	return StoreEmail;
+	}
+public WebElement Storephone()
+{
+	return StorePhone;
+	}
+public WebElement StoreCountry()
+{
+	return StoreCountry;
+	}
+public WebElement StoreCity()
+{
+	return StoreCity;
+	}
+public WebElement StoreAddres()
+{
+	return StoreAddress;
+	}
+public WebElement Footer()
+{
+	return ReceiptFooter;
+}
+public void ClickOnStores()
+{
+	action.click1(StoreHeader, "Clicking on Stores");
+	}
+
+public boolean IsAddStorePresent()
+{
+	action.moveToElement(getDriver(), AddStoreBtn);
+	return action.isDisplayed(getDriver(), AddStoreBtn);
+}
+public void ClickOnAddStore()
+{
+	action.moveToElement(getDriver(), AddStoreBtn);
+	action.click1(AddStoreBtn, "Clicking on AddStore");
+	}
+public boolean IsAddFormHeaderPresent()
+{
+	return action.isDisplayed(getDriver(), AddFormHeader);
+}
+public void FillAddStoreForm()
+{
+	action.type(StoreName, "OMStores");
+	action.type(StoreEmail,"omstores@gmail.com");
+	action.type(StorePhone, "09923423244");
+	action.type(StoreCountry, "Oman");
+	action.type(StoreCity,"Muscat");
+	action.type(StoreAddress, "WadiKhabir");
+	action.type(ReceiptFooter, "OMStores receipt ---");
+	
+	
+	
+	}
+
+}

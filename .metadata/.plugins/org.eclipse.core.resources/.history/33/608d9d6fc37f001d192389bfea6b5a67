@@ -1,0 +1,13 @@
+package com.Restaurant.Pageobjects;
+
+import org.openqa.selenium.support.PageFactory;
+
+import com.Restaurant.Baseclass.BaseClass;
+
+public class ReportsPage extends BaseClass{
+	
+public ReportsPage()
+{
+	PageFactory.initElements(getDriver(), this);
+}
+}

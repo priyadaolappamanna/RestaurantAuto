@@ -1,0 +1,26 @@
+package com.Restaurant.Testcases;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.Restaurant.Baseclass.BaseClass;
+import com.Restaurant.Pageobjects.ExpensePage;
+import com.Restaurant.Pageobjects.LogInpage;
+
+import com.Restaurant.Utilities.Log;
+
+public class VerifyExpensePageTest extends BaseClass {
+@Test
+public void VerifyAddExpense() throws InterruptedException
+{
+	Log.startTestCase("VerifyAddExpense");
+	LogInpage Lp3=new LogInpage();
+	Lp3.ValidLogin();
+	ExpensePage hp=new ExpensePage();
+	hp.ClickOnExpense();
+	Thread.sleep(2000);
+	//Assert.assertTrue(hp.IsAddExpPresent(),"not showing AddExpense");
+	Thread.sleep(2000);
+	Log.endTestCase("VerifyAddExpense");
+}
+}

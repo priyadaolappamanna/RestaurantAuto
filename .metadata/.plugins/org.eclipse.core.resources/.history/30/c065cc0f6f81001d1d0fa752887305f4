@@ -1,0 +1,82 @@
+package com.Restaurant.Testcases;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.Restaurant.Baseclass.BaseClass;
+import com.Restaurant.Pageobjects.PeopleAddCustomerPage;
+import com.Restaurant.Pageobjects.LogInpage;
+import com.Restaurant.Pageobjects.PeopleAddWaiterPage;
+import com.Restaurant.Utilities.Log;
+
+public class VerifyPeopleAddCustomerPageTest extends BaseClass {
+	@Test(priority=1)
+	public void VerifyCustPage() throws InterruptedException
+	{
+	Log.startTestCase("VerifyCustomerPage");
+	LogInpage Lp1=new LogInpage();
+	Lp1.ValidLogin();
+	PeopleAddCustomerPage c1=new PeopleAddCustomerPage();
+	c1.ClickOnPeople();
+	Thread.sleep(3000);
+	c1.ClickOnCustomers();
+	Thread.sleep(3000);
+	Assert.assertTrue(c1.IsAddCustomerPresent(),"not showing addcustomers");
+	c1.ClickOnAddCustomer();
+	Thread.sleep(3000);
+	Assert.assertTrue(c1.IsFormHeaderPresent(),"not showing formheader");
+	Thread.sleep(3000);
+	c1.FillAddCustomerForm();
+	Thread.sleep(3000);
+	c1.ClickOnSubmit();
+	Assert.assertTrue(c1.SearchCustomers(),"field is not added");	
+	Log.endTestCase("VerifyCustomerPage");
+	}
+	
+	@Test(priority=2)
+	public void verifyeditcustomer() throws InterruptedException
+	{
+		Log.startTestCase("VerifyPeopleEditCustomerPageTest");
+		LogInpage Lp1=new LogInpage();
+		Lp1.ValidLogin();
+		PeopleAddCustomerPage c2=new PeopleAddCustomerPage();
+		c2.EditCustomers();
+		Thread.sleep(3000);
+		Assert.assertTrue(c2.IsEditCustBackButonPresent(),"not showing backbutton");
+		c2.ClickOnSubmit();
+		Assert.assertTrue(c2.ConfirmEdit(),"field is not edited");	
+		Log.endTestCase("VerifyPeopleAddWaiterPageTest");
+		
+	}
+	@Test(priority=4)
+	public void verifyselectnum() throws InterruptedException
+	{
+		Log.startTestCase("VerifyPeopleEditCustomerPageTest");
+		LogInpage Lp1=new LogInpage();
+		Lp1.ValidLogin();
+		PeopleAddCustomerPage c2=new PeopleAddCustomerPage();
+		c2.ClickOnPeople();
+		Thread.sleep(3000);
+		c2.ClickOnCustomers();
+		Thread.sleep(3000);
+		c2.SelectNum();;
+		Assert.assertTrue(c2.IsCustomersshowentriesPresent(),"Show entries not present");
+		Thread.sleep(3000);
+		Log.endTestCase("VerifyPeopleAddWaiterPageTest");
+		
+	}
+	@Test(priority=3)
+	public void VerifyCustomerDelete() throws InterruptedException
+	{
+		Log.startTestCase("VerifyPeopleDeleteCustomerPageTest");
+		LogInpage Lp1=new LogInpage();
+		Lp1.ValidLogin();
+		PeopleAddCustomerPage c2=new PeopleAddCustomerPage();
+		Thread.sleep(3000);
+		c2.CustomerDelete();
+		Assert.assertTrue(c2.CustomerDelete(),"not deleted");
+		Log.endTestCase("VerifyPeopleDeleteCustomerPageTest");
+	}
+	
+
+}

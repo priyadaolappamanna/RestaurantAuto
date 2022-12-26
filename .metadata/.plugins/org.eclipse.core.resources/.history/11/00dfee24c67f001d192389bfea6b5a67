@@ -1,0 +1,28 @@
+package com.Restaurant.Pageobjects;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.Restaurant.Baseclass.BaseClass;
+
+public class ReportsPage extends BaseClass{
+	
+public ReportsPage()
+{
+	PageFactory.initElements(getDriver(), this);
+}
+//reports button
+@FindBy(xpath="//span[contains(text(),'Reports')]")
+WebElement Reports;
+
+public WebElement Report()
+{
+	return Reports;
+}
+public void ClickOnReports()
+{
+	action.click1(Reports, "Clicking on Reports");
+}
+
+}

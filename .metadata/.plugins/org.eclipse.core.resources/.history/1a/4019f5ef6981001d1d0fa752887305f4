@@ -1,0 +1,231 @@
+package com.Restaurant.Pageobjects;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
+
+import com.Restaurant.Baseclass.BaseClass;
+
+public class PeopleAddSupplierPage extends BaseClass {
+	//WebDriver driver;
+	public PeopleAddSupplierPage()
+	{
+		//this.driver=driver;
+		PageFactory.initElements(getDriver(), this);
+	}
+	    //people
+		@FindBy(xpath = "//i[@class='fa fa-users']")
+		WebElement people;
+
+	    //suppliers
+		@FindBy(xpath = "//span[contains(text(),'Suppliers')]")
+		WebElement Suppliers;
+		
+		//add suppliers
+		@FindBy(xpath = "//button[contains(text(),'Add Supplier')]")
+		WebElement AddSupp;
+		
+		//form header for suppliers
+		@FindBy (xpath="//h4[contains(text(),'Add Supplier')]")
+		WebElement FormHeaderSupp;
+		
+		//add supplier for suppliername field
+		@FindBy(xpath="//input[@id='SupplierName']")
+		WebElement SuppName;
+		
+		//add supplier for phone number
+		@FindBy(xpath="//input[@id='SupplierPhone']")
+		WebElement SuppPhone;
+		
+		//add supplier for email
+		@FindBy(xpath="//input[@id='SupplierEmail']")
+		WebElement SuppEmail;
+		
+		//add supplier submit
+		@FindBy(xpath="//button[@class='btn btn-add']")
+		WebElement SubmitSupp;
+		
+		@FindBy(xpath="//input[@type='search']")
+		WebElement searchsupplier;
+		
+		//Result of search
+		@FindBy(xpath="//table[@id='Table']/tbody/tr/td[1]")
+		WebElement SearchName;
+		//edit button
+		@FindBy(xpath="//i[@class='fa fa-pencil']")
+		WebElement edit;
+		
+		//number drop
+		@FindBy(xpath="//select[@name='Table_length']")
+		WebElement Numdrop;
+		public void SelectNum()
+		{
+			Select sel=new Select(Numdrop);
+			sel.selectByIndex(1);
+			
+		}
+		@FindBy(xpath="//div[@class='dataTables_info']")
+		WebElement ShowEntry;
+		@FindBy(xpath="//a[@class='btn btn-default float-right']")
+		WebElement Back;
+		
+		//delete button
+		@FindBy(xpath="//a[@data-toggle='popover']")
+		WebElement Delete;
+		//confirm delete
+		@FindBy(xpath="//a[contains(text(),'Yes, delete it!')]")
+		WebElement CfmDel;
+				
+		@FindBy(xpath="//td[@class='dataTables_empty']")
+		WebElement Nomatch;
+								
+		public WebElement Confirmdel()
+		{
+		return CfmDel;
+					
+		}
+		public WebElement Deletebtn()
+		{
+			return Delete;
+			}
+		
+		public WebElement Backbtn()
+		{
+			return Back;
+		}
+		 public WebElement editbtn()
+		 {
+			 return edit;
+		 }
+		public WebElement people() {
+			return people;
+		}
+
+		public WebElement waiter() {
+			return Suppliers;
+		}
+
+		public WebElement Addwaiter() {
+			return AddSupp;
+		}
+		public WebElement Form() {
+			return FormHeaderSupp;
+		}
+		public WebElement SuppName() {
+			return SuppName;
+		}
+		public WebElement Supphone() {
+			return SuppPhone;
+		}
+		public WebElement SuppEmail() {
+			return SuppEmail ;
+		}
+		public WebElement Submit() {
+			return SubmitSupp;
+		}
+		public WebElement SearchSupp() {
+			return searchsupplier;
+		}
+		public WebElement Searchname() {
+			return SearchName;
+		}
+		
+		public void ClickOnPeople() {
+			action.click1(people, "Clicking on people button");
+		}
+
+		public void ClickOnSuppliers() {
+			action.click1(Suppliers, "Clicking on suppliers");
+		}
+
+		public boolean IsAddsuppliersPresent() {
+			return action.isDisplayed(getDriver(), AddSupp);
+
+		}
+		public boolean IsFormHeaderPresent() {
+			return action.isDisplayed(getDriver(),FormHeaderSupp );
+
+		}
+		public boolean IsEditSuppBackButonPresent() {
+			return action.isDisplayed(getDriver(), Back);
+		}
+
+		public void ClickOnAddSupplier()
+		{
+			action.moveToElement(getDriver(), AddSupp);
+			action.click1(AddSupp, "Clicking on Addwaiters");
+		}
+		public void FillAddSupplierForm()
+		{
+			action.click1(Suppliers, "clicking on suppliers");
+			action.type(SuppName, "Vinu");
+			action.type(SuppPhone, "9865412334");
+			action.type(SuppEmail, "lwll005@gmail.com");
+			action.click1(SubmitSupp, "submit clicking");
+					
+			}
+		public void ClickOnSubmitSup()
+		{
+			action.click1(SubmitSupp, "clicking on submit button");
+			}
+		public boolean Searchsuppliers()
+		{
+			action.click1(searchsupplier, "Clicking on search");
+			action.type(searchsupplier, "Vinu");
+			String Result=SearchName.getText();
+			 boolean status=false;
+			 if(Result.equalsIgnoreCase("vinu"))
+			 {
+				 status=true;
+			 }
+			return status;	
+		}
+		public void EditSuppliers() {
+			ClickOnPeople();
+			ClickOnSuppliers();
+			action.click1(searchsupplier, "clicking on search");
+			action.type(searchsupplier, "Vinu");
+			action.click1(edit, "click to edit athul");
+			action.type(SuppEmail, "vinu90@gmail.com");
+		}
+		public boolean ConfirmEdit()
+		{
+			String Res=SuppEmail.getText();
+			boolean statuc=false;
+			if(SuppEmail.getText().equalsIgnoreCase("vinu90@gmail.com"));
+			{
+				statuc=true;
+			}
+			return statuc;
+			
+		}
+		public boolean IssuppliersshowentriesPresent()
+		{
+			 
+			 action.click1(Numdrop, "25 entries");
+			 action.moveToElement(getDriver(), AddSupp);
+			return action.isDisplayed(getDriver(),ShowEntry );
+			
+		}
+		public boolean SupplierDelete()
+		{
+			ClickOnPeople();
+			ClickOnSuppliers();
+			action.click1(searchsupplier, "clicking on search");
+			action.type(searchsupplier, "Vinu");
+			action.click1(Delete, "clicking on delete");
+			action.click1(CfmDel, "Confirming the delete has happ");
+			action.type(searchsupplier, "Vinay");
+			String Ress=Nomatch.getText();
+			boolean stat=false;
+			if(Ress.equalsIgnoreCase("No matching records found"));
+			{
+				stat=true;
+			}
+			return stat;
+			
+				}
+		
+}

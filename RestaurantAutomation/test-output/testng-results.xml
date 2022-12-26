@@ -1,0 +1,1504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results retried="1" ignored="24" total="56" passed="18" failed="12" skipped="1">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-12-26T11:07:03 IST" name="Suite" finished-at="2022-12-26T11:19:31 IST" duration-ms="748676">
+    <groups>
+    </groups>
+    <test started-at="2022-12-26T11:07:03 IST" name="Test1" finished-at="2022-12-26T11:16:15 IST" duration-ms="552468">
+      <class name="com.Restaurant.Testcases.VerifyStoresPageTest">
+        <test-method is-config="true" signature="firstcall(java.lang.String)[pri:0, instance:com.Restaurant.Testcases.VerifyStoresPageTest@196a42c3]" started-at="2022-12-26T11:11:36 IST" name="firstcall" finished-at="2022-12-26T11:11:38 IST" duration-ms="2560" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcall -->
+        <test-method signature="VerifyAddStore()[pri:1, instance:com.Restaurant.Testcases.VerifyStoresPageTest@196a42c3]" started-at="2022-12-26T11:11:38 IST" name="VerifyAddStore" finished-at="2022-12-26T11:12:43 IST" duration-ms="65083" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchSessionException">
+            <message>
+              <![CDATA[invalid session id
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9632332097c31a1d72bfc17732ff4f70, findElement {using=xpath, value=//td[contains(text(),'OMStores')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\priya\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58166}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58166/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9632332097c31a1d72bfc17732ff4f70]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9632332097c31a1d72bfc17732ff4f70, findElement {using=xpath, value=//td[contains(text(),'OMStores')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\priya\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58166}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58166/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9632332097c31a1d72bfc17732ff4f70
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+at jdk.proxy2/jdk.proxy2.$Proxy22.getText(Unknown Source)
+at com.Restaurant.Pageobjects.StoresPage.SearchStores(StoresPage.java:182)
+at com.Restaurant.Testcases.VerifyStoresPageTest.VerifyAddStore(VerifyStoresPageTest.java:21)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:32)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyAddStore -->
+        <test-method is-config="true" signature="driverclose()[pri:0, instance:com.Restaurant.Testcases.VerifyStoresPageTest@196a42c3]" started-at="2022-12-26T11:12:43 IST" name="driverclose" finished-at="2022-12-26T11:12:44 IST" duration-ms="250" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverclose -->
+        <test-method is-config="true" signature="firstcall(java.lang.String)[pri:0, instance:com.Restaurant.Testcases.VerifyStoresPageTest@196a42c3]" started-at="2022-12-26T11:13:16 IST" name="firstcall" finished-at="2022-12-26T11:13:18 IST" duration-ms="2569" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcall -->
+        <test-method signature="verifyeditstore()[pri:2, instance:com.Restaurant.Testcases.VerifyStoresPageTest@196a42c3]" started-at="2022-12-26T11:13:18 IST" name="verifyeditstore" finished-at="2022-12-26T11:13:53 IST" duration-ms="34578" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchSessionException">
+            <message>
+              <![CDATA[invalid session id
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0d3dd6675fbf0ea35e50041cd8f2987a, findElement {using=id, value=Country}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\priya\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58338}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58338/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 0d3dd6675fbf0ea35e50041cd8f2987a]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0d3dd6675fbf0ea35e50041cd8f2987a, findElement {using=id, value=Country}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\priya\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58338}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58338/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 0d3dd6675fbf0ea35e50041cd8f2987a
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+at jdk.proxy2/jdk.proxy2.$Proxy22.getText(Unknown Source)
+at com.Restaurant.Pageobjects.StoresPage.ConfirmEdit(StoresPage.java:205)
+at com.Restaurant.Testcases.VerifyStoresPageTest.verifyeditstore(VerifyStoresPageTest.java:31)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:32)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyeditstore -->
+        <test-method is-config="true" signature="driverclose()[pri:0, instance:com.Restaurant.Testcases.VerifyStoresPageTest@196a42c3]" started-at="2022-12-26T11:13:53 IST" name="driverclose" finished-at="2022-12-26T11:14:09 IST" duration-ms="16201" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverclose -->
+        <test-method signature="verifyStoreDelete()[pri:3, instance:com.Restaurant.Testcases.VerifyStoresPageTest@196a42c3]" started-at="2022-12-26T11:15:09 IST" name="verifyStoreDelete" finished-at="2022-12-26T11:15:09 IST" depends-on-methods="com.Restaurant.Testcases.VerifyStoresPageTest.verifyeditstore" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method com.Restaurant.Testcases.VerifyStoresPageTest.verifyStoreDelete() on instance com.Restaurant.Testcases.VerifyStoresPageTest@196a42c3 depends on not successfully finished methods 
+[com.Restaurant.Testcases.VerifyStoresPageTest.verifyeditstore() on instance com.Restaurant.Testcases.VerifyStoresPageTest@196a42c3]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method com.Restaurant.Testcases.VerifyStoresPageTest.verifyStoreDelete() on instance com.Restaurant.Testcases.VerifyStoresPageTest@196a42c3 depends on not successfully finished methods 
+[com.Restaurant.Testcases.VerifyStoresPageTest.verifyeditstore() on instance com.Restaurant.Testcases.VerifyStoresPageTest@196a42c3]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:149)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:32)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyStoreDelete -->
+      </class> <!-- com.Restaurant.Testcases.VerifyStoresPageTest -->
+      <class name="com.Restaurant.Testcases.VerifyPeopleAddCustomerPageTest">
+        <test-method is-config="true" signature="firstcall(java.lang.String)[pri:0, instance:com.Restaurant.Testcases.VerifyPeopleAddCustomerPageTest@1c5920df]" started-at="2022-12-26T11:07:03 IST" name="firstcall" finished-at="2022-12-26T11:07:07 IST" duration-ms="4730" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcall -->
+        <test-method retried="true" signature="VerifyCustPage()[pri:0, instance:com.Restaurant.Testcases.VerifyPeopleAddCustomerPageTest@1c5920df]" started-at="2022-12-26T11:07:07 IST" name="VerifyCustPage" finished-at="2022-12-26T11:08:12 IST" duration-ms="64960" status="SKIP">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //button[contains(text(),'Add Customer')]' (tried for 20 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //button[contains(text(),'Add Customer')]' (tried for 20 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+at com.Restaurant.action.ActionClass.explicitWait(ActionClass.java:721)
+at com.Restaurant.Pageobjects.PeopleAddCustomerPage.FillAddCustomerForm(PeopleAddCustomerPage.java:177)
+at com.Restaurant.Testcases.VerifyPeopleAddCustomerPageTest.VerifyCustPage(VerifyPeopleAddCustomerPageTest.java:18)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:32)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(text(),'Add Customer')]"}
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [972c8670450026a681de69007b42d3fe, findElement {using=xpath, value=//button[contains(text(),'Add Customer')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\priya\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57718}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57718/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 972c8670450026a681de69007b42d3fe
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+at jdk.proxy2/jdk.proxy2.$Proxy22.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
+at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+... 26 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyCustPage -->
+        <test-method is-config="true" signature="driverclose()[pri:0, instance:com.Restaurant.Testcases.VerifyPeopleAddCustomerPageTest@1c5920df]" started-at="2022-12-26T11:08:12 IST" name="driverclose" finished-at="2022-12-26T11:08:29 IST" duration-ms="16246" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverclose -->
+        <test-method is-config="true" signature="firstcall(java.lang.String)[pri:0, instance:com.Restaurant.Testcases.VerifyPeopleAddCustomerPageTest@1c5920df]" started-at="2022-12-26T11:08:29 IST" name="firstcall" finished-at="2022-12-26T11:08:31 IST" duration-ms="2740" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcall -->
+        <test-method signature="VerifyCustPage()[pri:0, instance:com.Restaurant.Testcases.VerifyPeopleAddCustomerPageTest@1c5920df]" started-at="2022-12-26T11:08:31 IST" name="VerifyCustPage" finished-at="2022-12-26T11:08:38 IST" duration-ms="7073" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyCustPage -->
+        <test-method is-config="true" signature="driverclose()[pri:0, instance:com.Restaurant.Testcases.VerifyPeopleAddCustomerPageTest@1c5920df]" started-at="2022-12-26T11:08:38 IST" name="driverclose" finished-at="2022-12-26T11:08:38 IST" duration-ms="87" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverclose -->
+        <test-method is-config="true" signature="firstcall(java.lang.String)[pri:0, instance:com.Restaurant.Testcases.VerifyPeopleAddCustomerPageTest@1c5920df]" started-at="2022-12-26T11:12:50 IST" name="firstcall" finished-at="2022-12-26T11:12:52 IST" duration-ms="2550" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcall -->
+        <test-method signature="verifyeditcustomer()[pri:2, instance:com.Restaurant.Testcases.VerifyPeopleAddCustomerPageTest@1c5920df]" started-at="2022-12-26T11:12:52 IST" name="verifyeditcustomer" finished-at="2022-12-26T11:13:00 IST" duration-ms="7309" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyeditcustomer -->
+        <test-method is-config="true" signature="driverclose()[pri:0, instance:com.Restaurant.Testcases.VerifyPeopleAddCustomerPageTest@1c5920df]" started-at="2022-12-26T11:13:00 IST" name="driverclose" finished-at="2022-12-26T11:13:16 IST" duration-ms="16187" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverclose -->
+        <test-method is-config="true" signature="firstcall(java.lang.String)[pri:0, instance:com.Restaurant.Testcases.VerifyPeopleAddCustomerPageTest@1c5920df]" started-at="2022-12-26T11:14:09 IST" name="firstcall" finished-at="2022-12-26T11:14:13 IST" duration-ms="4001" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcall -->
+        <test-method signature="VerifyCustomerDelete()[pri:3, instance:com.Restaurant.Testcases.VerifyPeopleAddCustomerPageTest@1c5920df]" started-at="2022-12-26T11:14:13 IST" name="VerifyCustomerDelete" finished-at="2022-12-26T11:14:53 IST" duration-ms="39163" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyCustomerDelete -->
+        <test-method is-config="true" signature="driverclose()[pri:0, instance:com.Restaurant.Testcases.VerifyPeopleAddCustomerPageTest@1c5920df]" started-at="2022-12-26T11:14:53 IST" name="driverclose" finished-at="2022-12-26T11:15:09 IST" duration-ms="16287" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverclose -->
+        <test-method is-config="true" signature="firstcall(java.lang.String)[pri:0, instance:com.Restaurant.Testcases.VerifyPeopleAddCustomerPageTest@1c5920df]" started-at="2022-12-26T11:15:09 IST" name="firstcall" finished-at="2022-12-26T11:15:12 IST" duration-ms="2830" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcall -->
+        <test-method signature="verifyselectnum()[pri:4, instance:com.Restaurant.Testcases.VerifyPeopleAddCustomerPageTest@1c5920df]" started-at="2022-12-26T11:15:12 IST" name="verifyselectnum" finished-at="2022-12-26T11:15:55 IST" duration-ms="43145" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//select[@name='Table_length']"}
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fb46c1c1ed4cc888dfbc445ecc9eec53, findElement {using=xpath, value=//select[@name='Table_length']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\priya\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58492}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58492/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fb46c1c1ed4cc888dfbc445ecc9eec53]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//select[@name='Table_length']"}
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fb46c1c1ed4cc888dfbc445ecc9eec53, findElement {using=xpath, value=//select[@name='Table_length']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\priya\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58492}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58492/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fb46c1c1ed4cc888dfbc445ecc9eec53
+at jdk.internal.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+at jdk.proxy2/jdk.proxy2.$Proxy22.getTagName(Unknown Source)
+at org.openqa.selenium.support.ui.Select.<init>(Select.java:46)
+at com.Restaurant.Pageobjects.PeopleAddCustomerPage.SelectNum(PeopleAddCustomerPage.java:106)
+at com.Restaurant.Testcases.VerifyPeopleAddCustomerPageTest.verifyselectnum(VerifyPeopleAddCustomerPageTest.java:38)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:32)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyselectnum -->
+        <test-method is-config="true" signature="driverclose()[pri:0, instance:com.Restaurant.Testcases.VerifyPeopleAddCustomerPageTest@1c5920df]" started-at="2022-12-26T11:16:05 IST" name="driverclose" finished-at="2022-12-26T11:16:15 IST" duration-ms="10138" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverclose -->
+      </class> <!-- com.Restaurant.Testcases.VerifyPeopleAddCustomerPageTest -->
+      <class name="com.Restaurant.Testcases.VerifyHomePageTest">
+        <test-method is-config="true" signature="firstcall(java.lang.String)[pri:0, instance:com.Restaurant.Testcases.VerifyHomePageTest@15043a2f]" started-at="2022-12-26T11:08:38 IST" name="firstcall" finished-at="2022-12-26T11:08:41 IST" duration-ms="2489" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcall -->
+        <test-method signature="VerifyHomePage()[pri:0, instance:com.Restaurant.Testcases.VerifyHomePageTest@15043a2f]" started-at="2022-12-26T11:08:41 IST" name="VerifyHomePage" finished-at="2022-12-26T11:10:00 IST" duration-ms="78806" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[English is not present expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: English is not present expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertTrue(Assert.java:56)
+at com.Restaurant.Testcases.VerifyHomePageTest.VerifyHomePage(VerifyHomePageTest.java:25)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:32)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyHomePage -->
+        <test-method is-config="true" signature="driverclose()[pri:0, instance:com.Restaurant.Testcases.VerifyHomePageTest@15043a2f]" started-at="2022-12-26T11:10:00 IST" name="driverclose" finished-at="2022-12-26T11:10:00 IST" duration-ms="200" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverclose -->
+      </class> <!-- com.Restaurant.Testcases.VerifyHomePageTest -->
+      <class name="com.Restaurant.Testcases.VerifySalesPageTest">
+        <test-method is-config="true" signature="firstcall(java.lang.String)[pri:0, instance:com.Restaurant.Testcases.VerifySalesPageTest@4c60d6e9]" started-at="2022-12-26T11:10:42 IST" name="firstcall" finished-at="2022-12-26T11:10:44 IST" duration-ms="2434" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcall -->
+        <test-method signature="VerifySales()[pri:0, instance:com.Restaurant.Testcases.VerifySalesPageTest@4c60d6e9]" started-at="2022-12-26T11:10:44 IST" name="VerifySales" finished-at="2022-12-26T11:11:15 IST" duration-ms="30629" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Sales page is not loaded expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Sales page is not loaded expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertTrue(Assert.java:56)
+at com.Restaurant.Testcases.VerifySalesPageTest.VerifySales(VerifySalesPageTest.java:21)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:32)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifySales -->
+        <test-method is-config="true" signature="driverclose()[pri:0, instance:com.Restaurant.Testcases.VerifySalesPageTest@4c60d6e9]" started-at="2022-12-26T11:11:26 IST" name="driverclose" finished-at="2022-12-26T11:11:36 IST" duration-ms="9810" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverclose -->
+      </class> <!-- com.Restaurant.Testcases.VerifySalesPageTest -->
+      <class name="com.Restaurant.Testcases.VerifyvaliduserLoginTest">
+        <test-method is-config="true" signature="loadConfig()[pri:0, instance:com.Restaurant.Testcases.VerifyvaliduserLoginTest@4be29ed9]" started-at="2022-12-26T11:07:03 IST" name="loadConfig" finished-at="2022-12-26T11:07:03 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadConfig -->
+        <test-method is-config="true" signature="firstcall(java.lang.String)[pri:0, instance:com.Restaurant.Testcases.VerifyvaliduserLoginTest@4be29ed9]" started-at="2022-12-26T11:10:00 IST" name="firstcall" finished-at="2022-12-26T11:10:03 IST" duration-ms="2521" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcall -->
+        <test-method signature="VerifyInvalidUserLogin(java.lang.String,java.lang.String)[pri:0, instance:com.Restaurant.Testcases.VerifyvaliduserLoginTest@4be29ed9]" started-at="2022-12-26T11:10:03 IST" name="VerifyInvalidUserLogin" data-provider="InvalidLoginDatas" finished-at="2022-12-26T11:10:03 IST" duration-ms="577" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[uname]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[password]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyInvalidUserLogin -->
+        <test-method is-config="true" signature="driverclose()[pri:0, instance:com.Restaurant.Testcases.VerifyvaliduserLoginTest@4be29ed9]" started-at="2022-12-26T11:10:03 IST" name="driverclose" finished-at="2022-12-26T11:10:20 IST" duration-ms="16236" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverclose -->
+        <test-method is-config="true" signature="firstcall(java.lang.String)[pri:0, instance:com.Restaurant.Testcases.VerifyvaliduserLoginTest@4be29ed9]" started-at="2022-12-26T11:10:20 IST" name="firstcall" finished-at="2022-12-26T11:10:22 IST" duration-ms="2443" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcall -->
+        <test-method signature="VerifyInvalidUserLogin(java.lang.String,java.lang.String)[pri:0, instance:com.Restaurant.Testcases.VerifyvaliduserLoginTest@4be29ed9]" started-at="2022-12-26T11:10:22 IST" name="VerifyInvalidUserLogin" data-provider="InvalidLoginDatas" finished-at="2022-12-26T11:10:22 IST" duration-ms="512" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[pwrod]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyInvalidUserLogin -->
+        <test-method is-config="true" signature="driverclose()[pri:0, instance:com.Restaurant.Testcases.VerifyvaliduserLoginTest@4be29ed9]" started-at="2022-12-26T11:10:22 IST" name="driverclose" finished-at="2022-12-26T11:10:23 IST" duration-ms="87" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverclose -->
+        <test-method is-config="true" signature="firstcall(java.lang.String)[pri:0, instance:com.Restaurant.Testcases.VerifyvaliduserLoginTest@4be29ed9]" started-at="2022-12-26T11:10:23 IST" name="firstcall" finished-at="2022-12-26T11:10:25 IST" duration-ms="2563" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcall -->
+        <test-method signature="VerifyInvalidUserLogin(java.lang.String,java.lang.String)[pri:0, instance:com.Restaurant.Testcases.VerifyvaliduserLoginTest@4be29ed9]" started-at="2022-12-26T11:10:25 IST" name="VerifyInvalidUserLogin" data-provider="InvalidLoginDatas" finished-at="2022-12-26T11:10:26 IST" duration-ms="514" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[login]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[pasword]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyInvalidUserLogin -->
+        <test-method is-config="true" signature="driverclose()[pri:0, instance:com.Restaurant.Testcases.VerifyvaliduserLoginTest@4be29ed9]" started-at="2022-12-26T11:10:26 IST" name="driverclose" finished-at="2022-12-26T11:10:42 IST" duration-ms="16242" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverclose -->
+        <test-method is-config="true" signature="firstcall(java.lang.String)[pri:0, instance:com.Restaurant.Testcases.VerifyvaliduserLoginTest@4be29ed9]" started-at="2022-12-26T11:12:44 IST" name="firstcall" finished-at="2022-12-26T11:12:46 IST" duration-ms="2576" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcall -->
+        <test-method signature="VerifyUserLogin(java.lang.String,java.lang.String)[pri:1, instance:com.Restaurant.Testcases.VerifyvaliduserLoginTest@4be29ed9]" started-at="2022-12-26T11:12:46 IST" name="VerifyUserLogin" finished-at="2022-12-26T11:12:50 IST" duration-ms="3457" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[password]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyUserLogin -->
+        <test-method is-config="true" signature="driverclose()[pri:0, instance:com.Restaurant.Testcases.VerifyvaliduserLoginTest@4be29ed9]" started-at="2022-12-26T11:12:50 IST" name="driverclose" finished-at="2022-12-26T11:12:50 IST" duration-ms="79" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverclose -->
+      </class> <!-- com.Restaurant.Testcases.VerifyvaliduserLoginTest -->
+    </test> <!-- Test1 -->
+    <test started-at="2022-12-26T11:07:03 IST" name="Test2" finished-at="2022-12-26T11:19:31 IST" duration-ms="748676">
+      <class name="com.Restaurant.Testcases.VerifyExpensePageTest">
+        <test-method is-config="true" signature="firstcall(java.lang.String)[pri:0, instance:com.Restaurant.Testcases.VerifyExpensePageTest@7fd50002]" started-at="2022-12-26T11:08:43 IST" name="firstcall" finished-at="2022-12-26T11:08:45 IST" duration-ms="2711" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcall -->
+        <test-method signature="VerifyAddExpense()[pri:1, instance:com.Restaurant.Testcases.VerifyExpensePageTest@7fd50002]" started-at="2022-12-26T11:08:45 IST" name="VerifyAddExpense" finished-at="2022-12-26T11:09:58 IST" duration-ms="72775" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//select[@id ='Category']"}
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7991e3842056fc78e8973e2956cb1b5c, findElement {using=xpath, value=//select[@id ='Category']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\priya\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57943}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57943/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 7991e3842056fc78e8973e2956cb1b5c]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//select[@id ='Category']"}
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7991e3842056fc78e8973e2956cb1b5c, findElement {using=xpath, value=//select[@id ='Category']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\priya\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57943}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57943/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 7991e3842056fc78e8973e2956cb1b5c
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+at jdk.proxy2/jdk.proxy2.$Proxy22.getTagName(Unknown Source)
+at org.openqa.selenium.support.ui.Select.<init>(Select.java:46)
+at com.Restaurant.Pageobjects.ExpensePage.SelectCategory(ExpensePage.java:54)
+at com.Restaurant.Pageobjects.ExpensePage.AddExpence(ExpensePage.java:178)
+at com.Restaurant.Testcases.VerifyExpensePageTest.VerifyAddExpense(VerifyExpensePageTest.java:19)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:32)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyAddExpense -->
+        <test-method is-config="true" signature="driverclose()[pri:0, instance:com.Restaurant.Testcases.VerifyExpensePageTest@7fd50002]" started-at="2022-12-26T11:09:58 IST" name="driverclose" finished-at="2022-12-26T11:10:00 IST" duration-ms="1461" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverclose -->
+        <test-method is-config="true" signature="firstcall(java.lang.String)[pri:0, instance:com.Restaurant.Testcases.VerifyExpensePageTest@7fd50002]" started-at="2022-12-26T11:14:59 IST" name="firstcall" finished-at="2022-12-26T11:15:01 IST" duration-ms="2657" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcall -->
+        <test-method signature="VerifyEditExpense()[pri:3, instance:com.Restaurant.Testcases.VerifyExpensePageTest@7fd50002]" started-at="2022-12-26T11:15:01 IST" name="VerifyEditExpense" finished-at="2022-12-26T11:15:08 IST" duration-ms="7054" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyEditExpense -->
+        <test-method is-config="true" signature="driverclose()[pri:0, instance:com.Restaurant.Testcases.VerifyExpensePageTest@7fd50002]" started-at="2022-12-26T11:15:09 IST" name="driverclose" finished-at="2022-12-26T11:15:09 IST" duration-ms="93" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverclose -->
+        <test-method is-config="true" signature="firstcall(java.lang.String)[pri:0, instance:com.Restaurant.Testcases.VerifyExpensePageTest@7fd50002]" started-at="2022-12-26T11:18:31 IST" name="firstcall" finished-at="2022-12-26T11:18:34 IST" duration-ms="2605" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcall -->
+        <test-method signature="VerifyDeleteExpense()[pri:4, instance:com.Restaurant.Testcases.VerifyExpensePageTest@7fd50002]" started-at="2022-12-26T11:18:34 IST" name="VerifyDeleteExpense" finished-at="2022-12-26T11:18:58 IST" duration-ms="24543" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//td[normalize-space()='uma']"}
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [30f1e0b5e4345de1e155a6dfefcb905a, findElement {using=xpath, value=//td[normalize-space()='uma']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\priya\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58638}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58638/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 30f1e0b5e4345de1e155a6dfefcb905a]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//td[normalize-space()='uma']"}
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [30f1e0b5e4345de1e155a6dfefcb905a, findElement {using=xpath, value=//td[normalize-space()='uma']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\priya\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58638}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58638/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 30f1e0b5e4345de1e155a6dfefcb905a
+at jdk.internal.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+at jdk.proxy2/jdk.proxy2.$Proxy22.getText(Unknown Source)
+at com.Restaurant.Pageobjects.ExpensePage.ConfirmDelete(ExpensePage.java:135)
+at com.Restaurant.Testcases.VerifyExpensePageTest.VerifyDeleteExpense(VerifyExpensePageTest.java:33)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:32)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyDeleteExpense -->
+        <test-method is-config="true" signature="driverclose()[pri:0, instance:com.Restaurant.Testcases.VerifyExpensePageTest@7fd50002]" started-at="2022-12-26T11:18:58 IST" name="driverclose" finished-at="2022-12-26T11:19:15 IST" duration-ms="16264" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverclose -->
+      </class> <!-- com.Restaurant.Testcases.VerifyExpensePageTest -->
+      <class name="com.Restaurant.Testcases.VerifyPeopleAddSupplierPageTest">
+        <test-method is-config="true" signature="firstcall(java.lang.String)[pri:0, instance:com.Restaurant.Testcases.VerifyPeopleAddSupplierPageTest@433defed]" started-at="2022-12-26T11:10:36 IST" name="firstcall" finished-at="2022-12-26T11:10:39 IST" duration-ms="3140" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcall -->
+        <test-method signature="VerifyAddSupplier()[pri:1, instance:com.Restaurant.Testcases.VerifyPeopleAddSupplierPageTest@433defed]" started-at="2022-12-26T11:10:39 IST" name="VerifyAddSupplier" finished-at="2022-12-26T11:11:36 IST" duration-ms="56584" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//table[@id='Table']/tbody/tr/td[1]"}
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d5d7d7bb66132adb0932237ce9a49f13, findElement {using=xpath, value=//table[@id='Table']/tbody/tr/td[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\priya\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58134}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58134/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d5d7d7bb66132adb0932237ce9a49f13]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//table[@id='Table']/tbody/tr/td[1]"}
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d5d7d7bb66132adb0932237ce9a49f13, findElement {using=xpath, value=//table[@id='Table']/tbody/tr/td[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\priya\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58134}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58134/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d5d7d7bb66132adb0932237ce9a49f13
+at jdk.internal.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+at jdk.proxy2/jdk.proxy2.$Proxy22.getText(Unknown Source)
+at com.Restaurant.Pageobjects.PeopleAddSupplierPage.Searchsuppliers(PeopleAddSupplierPage.java:163)
+at com.Restaurant.Testcases.VerifyPeopleAddSupplierPageTest.VerifyAddSupplier(VerifyPeopleAddSupplierPageTest.java:20)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:32)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyAddSupplier -->
+        <test-method is-config="true" signature="driverclose()[pri:0, instance:com.Restaurant.Testcases.VerifyPeopleAddSupplierPageTest@433defed]" started-at="2022-12-26T11:11:36 IST" name="driverclose" finished-at="2022-12-26T11:11:36 IST" duration-ms="79" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverclose -->
+        <test-method is-config="true" signature="firstcall(java.lang.String)[pri:0, instance:com.Restaurant.Testcases.VerifyPeopleAddSupplierPageTest@433defed]" started-at="2022-12-26T11:13:25 IST" name="firstcall" finished-at="2022-12-26T11:13:27 IST" duration-ms="2657" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcall -->
+        <test-method signature="verifyeditsupplier()[pri:2, instance:com.Restaurant.Testcases.VerifyPeopleAddSupplierPageTest@433defed]" started-at="2022-12-26T11:13:27 IST" name="verifyeditsupplier" finished-at="2022-12-26T11:13:34 IST" duration-ms="6979" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyeditsupplier -->
+        <test-method is-config="true" signature="driverclose()[pri:0, instance:com.Restaurant.Testcases.VerifyPeopleAddSupplierPageTest@433defed]" started-at="2022-12-26T11:13:34 IST" name="driverclose" finished-at="2022-12-26T11:13:50 IST" duration-ms="16205" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverclose -->
+        <test-method is-config="true" signature="firstcall(java.lang.String)[pri:0, instance:com.Restaurant.Testcases.VerifyPeopleAddSupplierPageTest@433defed]" started-at="2022-12-26T11:15:09 IST" name="firstcall" finished-at="2022-12-26T11:15:11 IST" duration-ms="2703" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcall -->
+        <test-method signature="VerifySupplierDelete()[pri:3, instance:com.Restaurant.Testcases.VerifyPeopleAddSupplierPageTest@433defed]" started-at="2022-12-26T11:15:11 IST" name="VerifySupplierDelete" finished-at="2022-12-26T11:16:15 IST" duration-ms="63819" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchSessionException">
+            <message>
+              <![CDATA[invalid session id
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fb46c1c1ed4cc888dfbc445ecc9eec53, findElement {using=xpath, value=//td[@class='dataTables_empty']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\priya\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58492}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58492/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fb46c1c1ed4cc888dfbc445ecc9eec53]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fb46c1c1ed4cc888dfbc445ecc9eec53, findElement {using=xpath, value=//td[@class='dataTables_empty']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\priya\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58492}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58492/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fb46c1c1ed4cc888dfbc445ecc9eec53
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+at jdk.proxy2/jdk.proxy2.$Proxy22.getText(Unknown Source)
+at com.Restaurant.Pageobjects.PeopleAddSupplierPage.SupplierDelete(PeopleAddSupplierPage.java:208)
+at com.Restaurant.Testcases.VerifyPeopleAddSupplierPageTest.VerifySupplierDelete(VerifyPeopleAddSupplierPageTest.java:49)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:32)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifySupplierDelete -->
+        <test-method is-config="true" signature="driverclose()[pri:0, instance:com.Restaurant.Testcases.VerifyPeopleAddSupplierPageTest@433defed]" started-at="2022-12-26T11:16:15 IST" name="driverclose" finished-at="2022-12-26T11:16:15 IST" duration-ms="94" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverclose -->
+        <test-method is-config="true" signature="firstcall(java.lang.String)[pri:0, instance:com.Restaurant.Testcases.VerifyPeopleAddSupplierPageTest@433defed]" started-at="2022-12-26T11:19:24 IST" name="firstcall" finished-at="2022-12-26T11:19:26 IST" duration-ms="2552" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcall -->
+        <test-method signature="verifyselectnum()[pri:4, instance:com.Restaurant.Testcases.VerifyPeopleAddSupplierPageTest@433defed]" started-at="2022-12-26T11:19:26 IST" name="verifyselectnum" finished-at="2022-12-26T11:19:31 IST" duration-ms="4867" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyselectnum -->
+        <test-method is-config="true" signature="driverclose()[pri:0, instance:com.Restaurant.Testcases.VerifyPeopleAddSupplierPageTest@433defed]" started-at="2022-12-26T11:19:31 IST" name="driverclose" finished-at="2022-12-26T11:19:31 IST" duration-ms="103" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverclose -->
+      </class> <!-- com.Restaurant.Testcases.VerifyPeopleAddSupplierPageTest -->
+      <class name="com.Restaurant.Testcases.VerifyProductPage">
+        <test-method is-config="true" signature="firstcall(java.lang.String)[pri:0, instance:com.Restaurant.Testcases.VerifyProductPage@2a693f59]" started-at="2022-12-26T11:10:00 IST" name="firstcall" finished-at="2022-12-26T11:10:02 IST" duration-ms="2617" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcall -->
+        <test-method signature="VerifyAddProduct()[pri:1, instance:com.Restaurant.Testcases.VerifyProductPage@2a693f59]" started-at="2022-12-26T11:10:02 IST" name="VerifyAddProduct" finished-at="2022-12-26T11:10:20 IST" duration-ms="17194" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertTrue(Assert.java:56)
+at org.testng.Assert.assertTrue(Assert.java:66)
+at com.Restaurant.Testcases.VerifyProductPage.VerifyAddProduct(VerifyProductPage.java:21)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:32)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyAddProduct -->
+        <test-method is-config="true" signature="driverclose()[pri:0, instance:com.Restaurant.Testcases.VerifyProductPage@2a693f59]" started-at="2022-12-26T11:10:20 IST" name="driverclose" finished-at="2022-12-26T11:10:36 IST" duration-ms="16241" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverclose -->
+        <test-method is-config="true" signature="firstcall(java.lang.String)[pri:0, instance:com.Restaurant.Testcases.VerifyProductPage@2a693f59]" started-at="2022-12-26T11:12:43 IST" name="firstcall" finished-at="2022-12-26T11:12:46 IST" duration-ms="2821" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcall -->
+        <test-method signature="VerifyEditProduct()[pri:2, instance:com.Restaurant.Testcases.VerifyProductPage@2a693f59]" started-at="2022-12-26T11:12:46 IST" name="VerifyEditProduct" finished-at="2022-12-26T11:13:25 IST" duration-ms="38442" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyEditProduct -->
+        <test-method is-config="true" signature="driverclose()[pri:0, instance:com.Restaurant.Testcases.VerifyProductPage@2a693f59]" started-at="2022-12-26T11:13:25 IST" name="driverclose" finished-at="2022-12-26T11:13:25 IST" duration-ms="105" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverclose -->
+        <test-method is-config="true" signature="firstcall(java.lang.String)[pri:0, instance:com.Restaurant.Testcases.VerifyProductPage@2a693f59]" started-at="2022-12-26T11:17:21 IST" name="firstcall" finished-at="2022-12-26T11:17:24 IST" duration-ms="2734" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcall -->
+        <test-method signature="verifyProductDelete()[pri:3, instance:com.Restaurant.Testcases.VerifyProductPage@2a693f59]" started-at="2022-12-26T11:17:24 IST" name="verifyProductDelete" finished-at="2022-12-26T11:18:15 IST" duration-ms="50851" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyProductDelete -->
+        <test-method is-config="true" signature="driverclose()[pri:0, instance:com.Restaurant.Testcases.VerifyProductPage@2a693f59]" started-at="2022-12-26T11:18:15 IST" name="driverclose" finished-at="2022-12-26T11:18:31 IST" duration-ms="16255" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverclose -->
+      </class> <!-- com.Restaurant.Testcases.VerifyProductPage -->
+      <class name="com.Restaurant.Testcases.VerifyReportPageTest">
+        <test-method is-config="true" signature="firstcall(java.lang.String)[pri:0, instance:com.Restaurant.Testcases.VerifyReportPageTest@3f4faf53]" started-at="2022-12-26T11:07:03 IST" name="firstcall" finished-at="2022-12-26T11:07:07 IST" duration-ms="4478" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcall -->
+        <test-method signature="VerifyReportPage()[pri:0, instance:com.Restaurant.Testcases.VerifyReportPageTest@3f4faf53]" started-at="2022-12-26T11:07:07 IST" name="VerifyReportPage" finished-at="2022-12-26T11:07:32 IST" duration-ms="24533" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyReportPage -->
+        <test-method is-config="true" signature="driverclose()[pri:0, instance:com.Restaurant.Testcases.VerifyReportPageTest@3f4faf53]" started-at="2022-12-26T11:07:32 IST" name="driverclose" finished-at="2022-12-26T11:07:32 IST" duration-ms="126" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverclose -->
+        <test-method is-config="true" signature="firstcall(java.lang.String)[pri:0, instance:com.Restaurant.Testcases.VerifyReportPageTest@3f4faf53]" started-at="2022-12-26T11:07:32 IST" name="firstcall" finished-at="2022-12-26T11:07:36 IST" duration-ms="4419" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcall -->
+        <test-method signature="VerifyReportPageClientStat()[pri:0, instance:com.Restaurant.Testcases.VerifyReportPageTest@3f4faf53]" started-at="2022-12-26T11:07:36 IST" name="VerifyReportPageClientStat" finished-at="2022-12-26T11:07:45 IST" duration-ms="9099" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyReportPageClientStat -->
+        <test-method is-config="true" signature="driverclose()[pri:0, instance:com.Restaurant.Testcases.VerifyReportPageTest@3f4faf53]" started-at="2022-12-26T11:07:45 IST" name="driverclose" finished-at="2022-12-26T11:07:45 IST" duration-ms="112" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverclose -->
+        <test-method is-config="true" signature="firstcall(java.lang.String)[pri:0, instance:com.Restaurant.Testcases.VerifyReportPageTest@3f4faf53]" started-at="2022-12-26T11:07:45 IST" name="firstcall" finished-at="2022-12-26T11:07:48 IST" duration-ms="2648" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcall -->
+        <test-method signature="VerifyReportProductStat()[pri:0, instance:com.Restaurant.Testcases.VerifyReportPageTest@3f4faf53]" started-at="2022-12-26T11:07:48 IST" name="VerifyReportProductStat" finished-at="2022-12-26T11:07:56 IST" duration-ms="8152" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyReportProductStat -->
+        <test-method is-config="true" signature="driverclose()[pri:0, instance:com.Restaurant.Testcases.VerifyReportPageTest@3f4faf53]" started-at="2022-12-26T11:07:56 IST" name="driverclose" finished-at="2022-12-26T11:07:56 IST" duration-ms="90" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverclose -->
+        <test-method is-config="true" signature="firstcall(java.lang.String)[pri:0, instance:com.Restaurant.Testcases.VerifyReportPageTest@3f4faf53]" started-at="2022-12-26T11:07:56 IST" name="firstcall" finished-at="2022-12-26T11:07:59 IST" duration-ms="2708" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcall -->
+        <test-method signature="VerifyReportStoreStat()[pri:0, instance:com.Restaurant.Testcases.VerifyReportPageTest@3f4faf53]" started-at="2022-12-26T11:07:59 IST" name="VerifyReportStoreStat" finished-at="2022-12-26T11:08:26 IST" duration-ms="27244" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyReportStoreStat -->
+        <test-method is-config="true" signature="driverclose()[pri:0, instance:com.Restaurant.Testcases.VerifyReportPageTest@3f4faf53]" started-at="2022-12-26T11:08:26 IST" name="driverclose" finished-at="2022-12-26T11:08:43 IST" duration-ms="16259" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverclose -->
+      </class> <!-- com.Restaurant.Testcases.VerifyReportPageTest -->
+      <class name="com.Restaurant.Testcases.VerifyPeopleAddWaiterPageTest">
+        <test-method is-config="true" signature="BeforeSuite()[pri:0, instance:com.Restaurant.Testcases.VerifyPeopleAddWaiterPageTest@548a24a]" started-at="2022-12-26T11:07:02 IST" name="BeforeSuite" finished-at="2022-12-26T11:07:03 IST" duration-ms="163" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeSuite -->
+        <test-method is-config="true" signature="loadConfig()[pri:0, instance:com.Restaurant.Testcases.VerifyPeopleAddWaiterPageTest@548a24a]" started-at="2022-12-26T11:07:03 IST" name="loadConfig" finished-at="2022-12-26T11:07:03 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadConfig -->
+        <test-method is-config="true" signature="firstcall(java.lang.String)[pri:0, instance:com.Restaurant.Testcases.VerifyPeopleAddWaiterPageTest@548a24a]" started-at="2022-12-26T11:11:36 IST" name="firstcall" finished-at="2022-12-26T11:11:38 IST" duration-ms="2571" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcall -->
+        <test-method signature="VerifyWaiterAdd()[pri:1, instance:com.Restaurant.Testcases.VerifyPeopleAddWaiterPageTest@548a24a]" started-at="2022-12-26T11:11:38 IST" name="VerifyWaiterAdd" finished-at="2022-12-26T11:12:43 IST" duration-ms="64552" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //input[@id='WaiterName']' (tried for 20 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //input[@id='WaiterName']' (tried for 20 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+at com.Restaurant.action.ActionClass.explicitWait(ActionClass.java:721)
+at com.Restaurant.Pageobjects.PeopleAddWaiterPage.FillAddWaiterForm(PeopleAddWaiterPage.java:184)
+at com.Restaurant.Testcases.VerifyPeopleAddWaiterPageTest.VerifyWaiterAdd(VerifyPeopleAddWaiterPageTest.java:19)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:32)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@id='WaiterName']"}
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9632332097c31a1d72bfc17732ff4f70, findElement {using=xpath, value=//input[@id='WaiterName']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\priya\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58166}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58166/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9632332097c31a1d72bfc17732ff4f70
+at jdk.internal.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+at jdk.proxy2/jdk.proxy2.$Proxy22.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
+at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+... 26 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyWaiterAdd -->
+        <test-method is-config="true" signature="driverclose()[pri:0, instance:com.Restaurant.Testcases.VerifyPeopleAddWaiterPageTest@548a24a]" started-at="2022-12-26T11:12:43 IST" name="driverclose" finished-at="2022-12-26T11:12:43 IST" duration-ms="113" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverclose -->
+        <test-method is-config="true" signature="firstcall(java.lang.String)[pri:0, instance:com.Restaurant.Testcases.VerifyPeopleAddWaiterPageTest@548a24a]" started-at="2022-12-26T11:13:50 IST" name="firstcall" finished-at="2022-12-26T11:13:53 IST" duration-ms="2549" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcall -->
+        <test-method signature="verifyeditwaiter()[pri:2, instance:com.Restaurant.Testcases.VerifyPeopleAddWaiterPageTest@548a24a]" started-at="2022-12-26T11:13:53 IST" name="verifyeditwaiter" finished-at="2022-12-26T11:14:42 IST" duration-ms="49396" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//input[@id='WaiterPhone']"}
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [85798855d7f7cb7c45a234d230636925, findElement {using=xpath, value=//input[@id='WaiterPhone']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\priya\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58412}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58412/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 85798855d7f7cb7c45a234d230636925]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@id='WaiterPhone']"}
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [85798855d7f7cb7c45a234d230636925, findElement {using=xpath, value=//input[@id='WaiterPhone']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\priya\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58412}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58412/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 85798855d7f7cb7c45a234d230636925
+at jdk.internal.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+at jdk.proxy2/jdk.proxy2.$Proxy22.getText(Unknown Source)
+at com.Restaurant.Pageobjects.PeopleAddWaiterPage.ConfirmEdit(PeopleAddWaiterPage.java:219)
+at com.Restaurant.Testcases.VerifyPeopleAddWaiterPageTest.verifyeditwaiter(VerifyPeopleAddWaiterPageTest.java:30)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:32)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyeditwaiter -->
+        <test-method is-config="true" signature="driverclose()[pri:0, instance:com.Restaurant.Testcases.VerifyPeopleAddWaiterPageTest@548a24a]" started-at="2022-12-26T11:14:43 IST" name="driverclose" finished-at="2022-12-26T11:14:59 IST" duration-ms="16213" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverclose -->
+        <test-method is-config="true" signature="firstcall(java.lang.String)[pri:0, instance:com.Restaurant.Testcases.VerifyPeopleAddWaiterPageTest@548a24a]" started-at="2022-12-26T11:16:15 IST" name="firstcall" finished-at="2022-12-26T11:16:18 IST" duration-ms="2645" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcall -->
+        <test-method signature="WaiterDelete()[pri:3, instance:com.Restaurant.Testcases.VerifyPeopleAddWaiterPageTest@548a24a]" started-at="2022-12-26T11:16:18 IST" name="WaiterDelete" finished-at="2022-12-26T11:17:05 IST" duration-ms="47072" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WaiterDelete -->
+        <test-method is-config="true" signature="driverclose()[pri:0, instance:com.Restaurant.Testcases.VerifyPeopleAddWaiterPageTest@548a24a]" started-at="2022-12-26T11:17:05 IST" name="driverclose" finished-at="2022-12-26T11:17:21 IST" duration-ms="16270" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverclose -->
+        <test-method is-config="true" signature="firstcall(java.lang.String)[pri:0, instance:com.Restaurant.Testcases.VerifyPeopleAddWaiterPageTest@548a24a]" started-at="2022-12-26T11:19:15 IST" name="firstcall" finished-at="2022-12-26T11:19:17 IST" duration-ms="2668" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcall -->
+        <test-method signature="verifyselectnum()[pri:4, instance:com.Restaurant.Testcases.VerifyPeopleAddWaiterPageTest@548a24a]" started-at="2022-12-26T11:19:17 IST" name="verifyselectnum" finished-at="2022-12-26T11:19:24 IST" duration-ms="6301" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyselectnum -->
+        <test-method is-config="true" signature="driverclose()[pri:0, instance:com.Restaurant.Testcases.VerifyPeopleAddWaiterPageTest@548a24a]" started-at="2022-12-26T11:19:24 IST" name="driverclose" finished-at="2022-12-26T11:19:24 IST" duration-ms="119" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverclose -->
+        <test-method is-config="true" signature="AfterSuite()[pri:0, instance:com.Restaurant.Testcases.VerifyPeopleAddWaiterPageTest@548a24a]" started-at="2022-12-26T11:19:31 IST" name="AfterSuite" finished-at="2022-12-26T11:19:32 IST" duration-ms="238" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterSuite -->
+      </class> <!-- com.Restaurant.Testcases.VerifyPeopleAddWaiterPageTest -->
+    </test> <!-- Test2 -->
+  </suite> <!-- Suite -->
+</testng-results>

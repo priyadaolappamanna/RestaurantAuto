@@ -1,0 +1,79 @@
+package com.Restaurant.Testcases;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.Restaurant.Baseclass.BaseClass;
+import com.Restaurant.Pageobjects.LogInpage;
+import com.Restaurant.Pageobjects.PeopleAddCustomerPage;
+import com.Restaurant.Pageobjects.PeopleAddSupplierPage;
+import com.Restaurant.Pageobjects.PeopleAddWaiterPage;
+import com.Restaurant.Utilities.Log;
+
+public class VerifyPeopleAddSupplierPageTest extends BaseClass{
+	@Test(priority=1)
+public void VerifyAddSupplier() throws InterruptedException
+{
+		Log.startTestCase("VerifyAddSupplierPage");
+		lp.ValidLogin();
+		PeopleAddSupplierPage s1=new PeopleAddSupplierPage();
+		s1.ClickOnPeople();
+		Thread.sleep(3000);
+		s1.ClickOnSuppliers();
+		Thread.sleep(3000);
+		Assert.assertTrue(s1.IsAddsuppliersPresent(),"not showing addsuppliers");
+		s1.ClickOnAddSupplier();;
+		Thread.sleep(3000);
+		Assert.assertTrue(s1.IsFormHeaderPresent(),"not showing formheader");
+		Thread.sleep(3000);
+		s1.FillAddSupplierForm();
+		Thread.sleep(3000);
+		s1.ClickOnSubmitSup();
+		Assert.assertTrue(s1.Searchsuppliers(),"field is not added");
+		Log.endTestCase("VerifyAddSupplierPage");
+		
+	}
+	@Test(priority=2)
+	public void verifyeditsupplier() throws InterruptedException
+	{
+		Log.startTestCase("VerifyPeopleEditSupplierPageTest");
+		lp.ValidLogin();
+		PeopleAddSupplierPage s1=new PeopleAddSupplierPage();
+		s1.EditSuppliers();
+		Thread.sleep(3000);
+		Assert.assertTrue(s1.IsEditSuppBackButonPresent(),"not showing backbutton");
+		s1.ClickOnSubmitSup();
+		Assert.assertTrue(s1.ConfirmEdit(),"field is not edited");	
+		Log.endTestCase("VerifyPeopleEditSupplierPageTest");
+		
+	}
+	@Test(priority=4)
+	public void verifyselectnum() throws InterruptedException
+	{
+		Log.startTestCase("VerifyPeopleverifyselectnumPageTest");
+		LogInpage Lp1=new LogInpage();
+		Lp1.ValidLogin();
+		PeopleAddSupplierPage s1=new PeopleAddSupplierPage();
+		s1.ClickOnPeople();
+		Thread.sleep(3000);
+		s1.ClickOnSuppliers();
+		Thread.sleep(3000);
+		s1.SelectNum();
+		Assert.assertTrue(s1.IssuppliersshowentriesPresent(),"Show entries not present");
+		Thread.sleep(3000);
+		Log.endTestCase("VerifyPeopleverifyselectnumPageTest");
+		
+	}
+	@Test(priority=3)
+	public void VerifySupplierDelete() throws InterruptedException
+	{
+		Log.startTestCase("VerifyPeopleSupplierdeletePageTest");
+		LogInpage Lp1=new LogInpage();
+		Lp1.ValidLogin();
+		PeopleAddSupplierPage s1=new PeopleAddSupplierPage();
+		Thread.sleep(3000);
+		s1.SupplierDelete();
+		Assert.assertTrue(s1.SupplierDelete(),"not deleted");
+		Log.endTestCase("VerifyPeopleSupplierdeletePageTest");
+	}
+}

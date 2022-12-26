@@ -1,0 +1,1558 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='UTF-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link href='http://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>RestaurantProject</title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+			
+            
+            .report-name { padding-left: 18px; } .report-name > img { float: 
+      left;height: 90%;margin-left: 30px;margin-top: 3px;width: auto; }
+        
+        
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo black"><img src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'>RestaurntProject Report
+         
+                <img src='C:\Users\priya\Documents\WorkSpace-Selenium\RestaurantAutomation\Logo-restaurant\download.png'/>
+            
+        </span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>Dec 26, 2022 11:07:03 AM</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m12 l12 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Tests</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='68.75%'><span class='strong'>22</span> test(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='25%'>8</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>2</span> others
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>VerifyReportPage</span>
+						<span class='test-time'>Dec 26, 2022 11:07:07 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 26, 2022 11:07:07 AM</span>
+	<span class='label end-time'>Dec 26, 2022 11:07:07 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>VerifyCustPage</span>
+						<span class='test-time'>Dec 26, 2022 11:07:07 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 26, 2022 11:07:07 AM</span>
+	<span class='label end-time'>Dec 26, 2022 11:07:32 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 24s+284ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:07:32 AM</td>
+				<td class='step-details'>
+						Pass Test case is: VerifyReportPage
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>VerifyReportPageClientStat</span>
+						<span class='test-time'>Dec 26, 2022 11:07:36 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 26, 2022 11:07:36 AM</span>
+	<span class='label end-time'>Dec 26, 2022 11:07:45 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 9s+98ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:07:45 AM</td>
+				<td class='step-details'>
+						Pass Test case is: VerifyReportPageClientStat
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>VerifyReportProductStat</span>
+						<span class='test-time'>Dec 26, 2022 11:07:48 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 26, 2022 11:07:48 AM</span>
+	<span class='label end-time'>Dec 26, 2022 11:07:56 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 8s+148ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:07:56 AM</td>
+				<td class='step-details'>
+						Pass Test case is: VerifyReportProductStat
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>VerifyReportStoreStat</span>
+						<span class='test-time'>Dec 26, 2022 11:07:59 AM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 26, 2022 11:07:59 AM</span>
+	<span class='label end-time'>Dec 26, 2022 11:08:26 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 27s+242ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>11:08:12 AM</td>
+				<td class='step-details'>
+						Skipped Test case is: VerifyCustPage
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:08:26 AM</td>
+				<td class='step-details'>
+						Pass Test case is: VerifyReportStoreStat
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>VerifyCustPage</span>
+						<span class='test-time'>Dec 26, 2022 11:08:31 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 26, 2022 11:08:31 AM</span>
+	<span class='label end-time'>Dec 26, 2022 11:08:38 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 7s+70ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:08:38 AM</td>
+				<td class='step-details'>
+						Pass Test case is: VerifyCustPage
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>VerifyHomePage</span>
+						<span class='test-time'>Dec 26, 2022 11:08:41 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 26, 2022 11:08:41 AM</span>
+	<span class='label end-time'>Dec 26, 2022 11:08:41 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='8'>
+					<div class='test-heading'>
+						<span class='test-name'>VerifyAddExpense</span>
+						<span class='test-time'>Dec 26, 2022 11:08:45 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 26, 2022 11:08:45 AM</span>
+	<span class='label end-time'>Dec 26, 2022 11:10:00 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 14s+689ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:09:58 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>VerifyAddExpense - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:09:58 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//select[@id ='Category']"}
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7991e3842056fc78e8973e2956cb1b5c, findElement {using=xpath, value=//select[@id ='Category']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\priya\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57943}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57943/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 7991e3842056fc78e8973e2956cb1b5c - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:09:58 AM</td>
+				<td class='step-details'>
+						ScreenShot is Attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/VerifyAddExpense_20221226110958.png' src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/VerifyAddExpense_20221226110958.png' data-src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/VerifyAddExpense_20221226110958.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:10:00 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>VerifyHomePage - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:10:00 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>java.lang.AssertionError: English is not present expected [true] but found [false] - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:10:00 AM</td>
+				<td class='step-details'>
+						ScreenShot is Attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/VerifyHomePage_20221226111000.png' src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/VerifyHomePage_20221226111000.png' data-src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/VerifyHomePage_20221226111000.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='9'>
+					<div class='test-heading'>
+						<span class='test-name'>VerifyAddProduct</span>
+						<span class='test-time'>Dec 26, 2022 11:10:02 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 26, 2022 11:10:02 AM</span>
+	<span class='label end-time'>Dec 26, 2022 11:10:02 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+2ms</span>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='10'>
+					<div class='test-heading'>
+						<span class='test-name'>VerifyInvalidUserLogin</span>
+						<span class='test-time'>Dec 26, 2022 11:10:03 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 26, 2022 11:10:03 AM</span>
+	<span class='label end-time'>Dec 26, 2022 11:10:20 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 16s+934ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:10:03 AM</td>
+				<td class='step-details'>
+						Pass Test case is: VerifyInvalidUserLogin
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:10:20 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>VerifyAddProduct - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:10:20 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>java.lang.AssertionError: expected [true] but found [false] - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:10:20 AM</td>
+				<td class='step-details'>
+						ScreenShot is Attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/VerifyAddProduct_20221226111020.png' src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/VerifyAddProduct_20221226111020.png' data-src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/VerifyAddProduct_20221226111020.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>VerifyInvalidUserLogin</span>
+						<span class='test-time'>Dec 26, 2022 11:10:22 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 26, 2022 11:10:22 AM</span>
+	<span class='label end-time'>Dec 26, 2022 11:10:22 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+512ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:10:22 AM</td>
+				<td class='step-details'>
+						Pass Test case is: VerifyInvalidUserLogin
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='12'>
+					<div class='test-heading'>
+						<span class='test-name'>VerifyInvalidUserLogin</span>
+						<span class='test-time'>Dec 26, 2022 11:10:25 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 26, 2022 11:10:25 AM</span>
+	<span class='label end-time'>Dec 26, 2022 11:10:26 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+514ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:10:26 AM</td>
+				<td class='step-details'>
+						Pass Test case is: VerifyInvalidUserLogin
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='13'>
+					<div class='test-heading'>
+						<span class='test-name'>VerifyAddSupplier</span>
+						<span class='test-time'>Dec 26, 2022 11:10:39 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 26, 2022 11:10:39 AM</span>
+	<span class='label end-time'>Dec 26, 2022 11:10:39 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='14'>
+					<div class='test-heading'>
+						<span class='test-name'>VerifySales</span>
+						<span class='test-time'>Dec 26, 2022 11:10:44 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 26, 2022 11:10:44 AM</span>
+	<span class='label end-time'>Dec 26, 2022 11:11:36 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 51s+466ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:11:15 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>VerifySales - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:11:15 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>java.lang.AssertionError: Sales page is not loaded expected [true] but found [false] - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:11:26 AM</td>
+				<td class='step-details'>
+						ScreenShot is Attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/VerifySales_20221226111115.png' src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/VerifySales_20221226111115.png' data-src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/VerifySales_20221226111115.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:11:36 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>VerifyAddSupplier - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:11:36 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//table[@id='Table']/tbody/tr/td[1]"}
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d5d7d7bb66132adb0932237ce9a49f13, findElement {using=xpath, value=//table[@id='Table']/tbody/tr/td[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\priya\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58134}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58134/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d5d7d7bb66132adb0932237ce9a49f13 - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:11:36 AM</td>
+				<td class='step-details'>
+						ScreenShot is Attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/VerifyAddSupplier_20221226111136.png' src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/VerifyAddSupplier_20221226111136.png' data-src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/VerifyAddSupplier_20221226111136.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='15'>
+					<div class='test-heading'>
+						<span class='test-name'>VerifyAddStore</span>
+						<span class='test-time'>Dec 26, 2022 11:11:38 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 26, 2022 11:11:38 AM</span>
+	<span class='label end-time'>Dec 26, 2022 11:11:38 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='16'>
+					<div class='test-heading'>
+						<span class='test-name'>VerifyWaiterAdd</span>
+						<span class='test-time'>Dec 26, 2022 11:11:38 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 26, 2022 11:11:38 AM</span>
+	<span class='label end-time'>Dec 26, 2022 11:12:43 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 5s+22ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:12:43 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>VerifyWaiterAdd - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:12:43 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //input[@id='WaiterName']' (tried for 20 second(s) with 500 milliseconds interval) - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:12:43 AM</td>
+				<td class='step-details'>
+						ScreenShot is Attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/VerifyWaiterAdd_20221226111243.png' src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/VerifyWaiterAdd_20221226111243.png' data-src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/VerifyWaiterAdd_20221226111243.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:12:43 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>VerifyAddStore - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:12:43 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9632332097c31a1d72bfc17732ff4f70, findElement {using=xpath, value=//td[contains(text(),'OMStores')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\priya\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58166}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58166/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9632332097c31a1d72bfc17732ff4f70 - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:12:43 AM</td>
+				<td class='step-details'>
+						ScreenShot is Attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/VerifyAddStore_20221226111243.png' src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/VerifyAddStore_20221226111243.png' data-src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/VerifyAddStore_20221226111243.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='17'>
+					<div class='test-heading'>
+						<span class='test-name'>VerifyEditProduct</span>
+						<span class='test-time'>Dec 26, 2022 11:12:46 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 26, 2022 11:12:46 AM</span>
+	<span class='label end-time'>Dec 26, 2022 11:12:46 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='18'>
+					<div class='test-heading'>
+						<span class='test-name'>VerifyUserLogin</span>
+						<span class='test-time'>Dec 26, 2022 11:12:46 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 26, 2022 11:12:46 AM</span>
+	<span class='label end-time'>Dec 26, 2022 11:12:50 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+457ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:12:50 AM</td>
+				<td class='step-details'>
+						Pass Test case is: VerifyUserLogin
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='19'>
+					<div class='test-heading'>
+						<span class='test-name'>verifyeditcustomer</span>
+						<span class='test-time'>Dec 26, 2022 11:12:52 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 26, 2022 11:12:52 AM</span>
+	<span class='label end-time'>Dec 26, 2022 11:13:00 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 7s+309ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:13:00 AM</td>
+				<td class='step-details'>
+						Pass Test case is: verifyeditcustomer
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='20'>
+					<div class='test-heading'>
+						<span class='test-name'>verifyeditstore</span>
+						<span class='test-time'>Dec 26, 2022 11:13:18 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 26, 2022 11:13:18 AM</span>
+	<span class='label end-time'>Dec 26, 2022 11:13:25 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 6s+77ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:13:25 AM</td>
+				<td class='step-details'>
+						Pass Test case is: VerifyEditProduct
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='21'>
+					<div class='test-heading'>
+						<span class='test-name'>verifyeditsupplier</span>
+						<span class='test-time'>Dec 26, 2022 11:13:27 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 26, 2022 11:13:27 AM</span>
+	<span class='label end-time'>Dec 26, 2022 11:13:34 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 6s+979ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:13:34 AM</td>
+				<td class='step-details'>
+						Pass Test case is: verifyeditsupplier
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='22'>
+					<div class='test-heading'>
+						<span class='test-name'>verifyeditwaiter</span>
+						<span class='test-time'>Dec 26, 2022 11:13:53 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 26, 2022 11:13:53 AM</span>
+	<span class='label end-time'>Dec 26, 2022 11:13:53 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+172ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:13:53 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>verifyeditstore - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:13:53 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0d3dd6675fbf0ea35e50041cd8f2987a, findElement {using=id, value=Country}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\priya\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58338}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58338/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 0d3dd6675fbf0ea35e50041cd8f2987a - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:13:53 AM</td>
+				<td class='step-details'>
+						ScreenShot is Attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/verifyeditstore_20221226111353.png' src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/verifyeditstore_20221226111353.png' data-src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/verifyeditstore_20221226111353.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='23'>
+					<div class='test-heading'>
+						<span class='test-name'>VerifyCustomerDelete</span>
+						<span class='test-time'>Dec 26, 2022 11:14:13 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 26, 2022 11:14:13 AM</span>
+	<span class='label end-time'>Dec 26, 2022 11:14:53 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 39s+162ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:14:42 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>verifyeditwaiter - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:14:42 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@id='WaiterPhone']"}
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [85798855d7f7cb7c45a234d230636925, findElement {using=xpath, value=//input[@id='WaiterPhone']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\priya\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58412}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58412/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 85798855d7f7cb7c45a234d230636925 - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:14:43 AM</td>
+				<td class='step-details'>
+						ScreenShot is Attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/verifyeditwaiter_20221226111442.png' src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/verifyeditwaiter_20221226111442.png' data-src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/verifyeditwaiter_20221226111442.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:14:53 AM</td>
+				<td class='step-details'>
+						Pass Test case is: VerifyCustomerDelete
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='24'>
+					<div class='test-heading'>
+						<span class='test-name'>VerifyEditExpense</span>
+						<span class='test-time'>Dec 26, 2022 11:15:01 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 26, 2022 11:15:01 AM</span>
+	<span class='label end-time'>Dec 26, 2022 11:15:08 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 7s+54ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:15:08 AM</td>
+				<td class='step-details'>
+						Pass Test case is: VerifyEditExpense
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='25'>
+					<div class='test-heading'>
+						<span class='test-name'>verifyStoreDelete</span>
+						<span class='test-time'>Dec 26, 2022 11:15:09 AM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 26, 2022 11:15:09 AM</span>
+	<span class='label end-time'>Dec 26, 2022 11:15:09 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>11:15:09 AM</td>
+				<td class='step-details'>
+						Skipped Test case is: verifyStoreDelete
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='26'>
+					<div class='test-heading'>
+						<span class='test-name'>VerifySupplierDelete</span>
+						<span class='test-time'>Dec 26, 2022 11:15:11 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 26, 2022 11:15:11 AM</span>
+	<span class='label end-time'>Dec 26, 2022 11:15:11 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='27'>
+					<div class='test-heading'>
+						<span class='test-name'>verifyselectnum</span>
+						<span class='test-time'>Dec 26, 2022 11:15:12 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 26, 2022 11:15:12 AM</span>
+	<span class='label end-time'>Dec 26, 2022 11:16:15 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 3s+557ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:15:55 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>verifyselectnum - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:15:55 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//select[@name='Table_length']"}
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fb46c1c1ed4cc888dfbc445ecc9eec53, findElement {using=xpath, value=//select[@name='Table_length']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\priya\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58492}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58492/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fb46c1c1ed4cc888dfbc445ecc9eec53 - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:16:05 AM</td>
+				<td class='step-details'>
+						ScreenShot is Attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/verifyselectnum_20221226111555.png' src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/verifyselectnum_20221226111555.png' data-src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/verifyselectnum_20221226111555.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:16:15 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>VerifySupplierDelete - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:16:15 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fb46c1c1ed4cc888dfbc445ecc9eec53, findElement {using=xpath, value=//td[@class='dataTables_empty']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\priya\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58492}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58492/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fb46c1c1ed4cc888dfbc445ecc9eec53 - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:16:15 AM</td>
+				<td class='step-details'>
+						ScreenShot is Attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/VerifySupplierDelete_20221226111615.png' src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/VerifySupplierDelete_20221226111615.png' data-src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/VerifySupplierDelete_20221226111615.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='28'>
+					<div class='test-heading'>
+						<span class='test-name'>WaiterDelete</span>
+						<span class='test-time'>Dec 26, 2022 11:16:18 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 26, 2022 11:16:18 AM</span>
+	<span class='label end-time'>Dec 26, 2022 11:17:05 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 47s+71ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:17:05 AM</td>
+				<td class='step-details'>
+						Pass Test case is: WaiterDelete
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='29'>
+					<div class='test-heading'>
+						<span class='test-name'>verifyProductDelete</span>
+						<span class='test-time'>Dec 26, 2022 11:17:24 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 26, 2022 11:17:24 AM</span>
+	<span class='label end-time'>Dec 26, 2022 11:18:15 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 50s+851ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:18:15 AM</td>
+				<td class='step-details'>
+						Pass Test case is: verifyProductDelete
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='30'>
+					<div class='test-heading'>
+						<span class='test-name'>VerifyDeleteExpense</span>
+						<span class='test-time'>Dec 26, 2022 11:18:34 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 26, 2022 11:18:34 AM</span>
+	<span class='label end-time'>Dec 26, 2022 11:18:58 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 24s+644ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:18:58 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>VerifyDeleteExpense - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:18:58 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//td[normalize-space()='uma']"}
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [30f1e0b5e4345de1e155a6dfefcb905a, findElement {using=xpath, value=//td[normalize-space()='uma']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\priya\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58638}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58638/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 30f1e0b5e4345de1e155a6dfefcb905a - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:18:58 AM</td>
+				<td class='step-details'>
+						ScreenShot is Attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/VerifyDeleteExpense_20221226111858.png' src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/VerifyDeleteExpense_20221226111858.png' data-src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/VerifyDeleteExpense_20221226111858.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='31'>
+					<div class='test-heading'>
+						<span class='test-name'>verifyselectnum</span>
+						<span class='test-time'>Dec 26, 2022 11:19:17 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 26, 2022 11:19:17 AM</span>
+	<span class='label end-time'>Dec 26, 2022 11:19:24 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 6s+301ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:19:24 AM</td>
+				<td class='step-details'>
+						Pass Test case is: verifyselectnum
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='32'>
+					<div class='test-heading'>
+						<span class='test-name'>verifyselectnum</span>
+						<span class='test-time'>Dec 26, 2022 11:19:26 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 26, 2022 11:19:26 AM</span>
+	<span class='label end-time'>Dec 26, 2022 11:19:31 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+866ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:19:31 AM</td>
+				<td class='step-details'>
+						Pass Test case is: verifyselectnum
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>32</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>0</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Dec 26, 2022 11:07:03 AM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Dec 26, 2022 11:19:31 AM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 12m 28s+803ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>HostName</td>
+								<td>MyHost</td>
+							</tr>
+							<tr>
+								<td>ProjectName</td>
+								<td>Restaurant</td>
+							</tr>
+							<tr>
+								<td>Tester</td>
+								<td>Priyada</td>
+							</tr>
+							<tr>
+								<td>OS</td>
+								<td>Win11</td>
+							</tr>
+							<tr>
+								<td>Browser</td>
+								<td>Chrome</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 32,
+				passParent: 22,
+				failParent: 8,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 2,
+				exceptionsParent: 10,
+				childCount: 0,
+				passChild: 0,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				debugChild: 0,
+				exceptionsChild: 0,
+				grandChildCount: 0,
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				debugGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		<script>
+			var timeline = {
+			        "VerifyReportPage":0,"VerifyCustPage":24.284,"VerifyReportPageClientStat":9.098,"VerifyReportProductStat":8.148,"VerifyReportStoreStat":27.242,"VerifyCustPage":7.07,"VerifyHomePage":0,"VerifyAddExpense":74.689,"VerifyAddProduct":0.002,"VerifyInvalidUserLogin":16.934,"VerifyInvalidUserLogin":0.512,"VerifyInvalidUserLogin":0.514,"VerifyAddSupplier":0,"VerifySales":51.466,"VerifyAddStore":0,"VerifyWaiterAdd":65.022,"VerifyEditProduct":0,"VerifyUserLogin":3.457,"verifyeditcustomer":7.309,"verifyeditstore":6.077,"verifyeditsupplier":6.979,"verifyeditwaiter":0.172,"VerifyCustomerDelete":39.162,"VerifyEditExpense":7.054,"verifyStoreDelete":0,"VerifySupplierDelete":0,"verifyselectnum":63.557,"WaiterDelete":47.071,"verifyProductDelete":50.851,"VerifyDeleteExpense":24.644,"verifyselectnum":6.301,"verifyselectnum":4.866
+			};
+		</script>
+		<script src='http://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>
+		<script type='text/javascript'>
+			
+            
+                $(document).ready(function() {
+                    
+                });
+            
+        
+		</script>
+	</body>
+</html>

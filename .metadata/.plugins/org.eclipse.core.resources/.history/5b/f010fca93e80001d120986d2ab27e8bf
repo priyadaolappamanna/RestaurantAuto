@@ -1,0 +1,21 @@
+package com.Restaurant.Pageobjects;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.Restaurant.Baseclass.BaseClass;
+
+public class POSPage extends BaseClass{
+	public POSPage()
+	{
+		PageFactory.initElements(getDriver(), this);
+	}
+	@FindBy(xpath="//span[text()='POS']")
+WebElement POS;
+	
+	//chose a Strore
+	@FindBy(xpath="//h1[contains (text(),' Choose a store ')]")
+	WebElement ChooseStore;
+	
+}

@@ -1,0 +1,83 @@
+package com.Restaurant.Testcases;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.Restaurant.Baseclass.BaseClass;
+import com.Restaurant.Pageobjects.LogInpage;
+import com.Restaurant.Pageobjects.PeopleAddWaiterPage;
+import com.Restaurant.Utilities.Log;
+
+public class VerifyPeopleAddWaiterPageTest extends BaseClass {
+	@Test(priority=1)
+	
+	public void VerifyWaiterAdd() throws InterruptedException
+	{
+	Log.startTestCase("VerifyPeopleAddWaiterPageTest");
+	LogInpage Lp1=new LogInpage();
+	Lp1.ValidLogin();
+	PeopleAddWaiterPage p1=new PeopleAddWaiterPage();
+	p1.ClickOnPeople();
+	Thread.sleep(3000);
+	p1.ClickOnWaiters();
+	Thread.sleep(3000);
+	Assert.assertTrue(p1.IsAddWaitersPresent(),"not showing addwaiters");
+	p1.ClickOnAddWaiter();
+	Thread.sleep(3000);
+	Assert.assertTrue(p1.IsFormHeaderPresent(),"not showing formheader");
+	Thread.sleep(3000);
+	p1.FillAddWaiterForm();
+	p1.SelectStore();
+	Thread.sleep(3000);
+	p1.ClickOnSubmit();
+	Assert.assertTrue(p1.SearchWaiters(),"field is not added");	
+	Log.endTestCase("VerifyPeopleAddWaiterPageTest");
+	
+	}
+	@Test(priority=2)
+	public void verifyeditwaiter() throws InterruptedException
+	{
+		Log.startTestCase("VerifyPeopleAddWaiterPageTest");
+		lp.ValidLogin();
+		PeopleAddWaiterPage p2=new PeopleAddWaiterPage();
+		p2.EditWaiters();
+		Thread.sleep(3000);
+		Assert.assertTrue(p2.IsEdiWaitersBackButonPresent(),"not showing backbutton");
+		p2.ClickOnSubmit();
+		Assert.assertTrue(p2.ConfirmEdit(),"field is not edited");	
+		Log.endTestCase("VerifyPeopleAddWaiterPageTest");
+		
+	}
+	@Test(priority=4)
+	public void verifyselectnum() throws InterruptedException
+	{
+		Log.startTestCase("VerifyPeopleAddWaiterPageTest");
+		LogInpage Lp1=new LogInpage();
+		Lp1.ValidLogin();
+		PeopleAddWaiterPage p1=new PeopleAddWaiterPage();
+		p1.ClickOnPeople();
+		Thread.sleep(3000);
+		p1.ClickOnWaiters();
+		Thread.sleep(3000);
+		p1.SelectNum();
+		Assert.assertTrue(p1.IsWaitershowentriesPresent(),"Show entries not present");
+		Thread.sleep(3000);
+		Log.endTestCase("VerifyPeopleAddWaiterPageTest");
+		
+	}
+	@Test(priority=3)
+	public void WaiterDelete() throws InterruptedException
+	{
+		Log.startTestCase("VerifyPeopleAddWaiterPageTest");
+		LogInpage Lp1=new LogInpage();
+		Lp1.ValidLogin();
+		PeopleAddWaiterPage p1=new PeopleAddWaiterPage();
+		Thread.sleep(3000);
+		p1.WaiterDelete();
+		Assert.assertTrue(p1.WaiterDelete(),"not deleted");
+		Log.endTestCase("VerifyPeopleAddWaiterPageTest");
+	}
+	
+	
+}

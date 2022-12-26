@@ -1,0 +1,65 @@
+package com.Restaurant.Testcases;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.Restaurant.Baseclass.BaseClass;
+import com.Restaurant.Pageobjects.LogInpage;
+import com.Restaurant.Pageobjects.ReportsPage;
+import com.Restaurant.Utilities.Log;
+
+public class VerifyReportPageTest extends BaseClass{
+	@Test
+	public void VerifyReportPage() throws InterruptedException
+	{
+		Log.startTestCase("VerifyReportPage");
+		LogInpage Lp2=new LogInpage();
+		Lp2.ValidLogin();
+		ReportsPage repo=new ReportsPage();
+		repo.ClickOnReports();
+		Thread.sleep(2000);
+		Assert.assertTrue(repo.IsTop5ProductsPresent());
+		Log.endTestCase("VerifyReportPage");
+	}
+@Test
+public void VerifyReportPageClientStat() throws InterruptedException
+{
+	Log.startTestCase("VerifyReportPageClientStat");
+	LogInpage Lp2=new LogInpage();
+	Lp2.ValidLogin();
+	ReportsPage repo=new ReportsPage();
+	repo.ClickOnSelectClient();
+	Thread.sleep(3000);
+	Assert.assertTrue(repo.IsReportStatusPresent());
+	repo.ClickonClose();
+	Log.endTestCase("VerifyReportPageClientStat");
+}
+@Test
+public void VerifyReportProductStat() throws InterruptedException
+{
+	Log.startTestCase("VerifyReportProductStat");
+	LogInpage Lp2=new LogInpage();
+	Lp2.ValidLogin();
+	ReportsPage repo=new ReportsPage();
+	repo.ClickOnSelectProduct();
+	Thread.sleep(3000);
+	Assert.assertTrue(repo.IsReportStatusPresent());
+	repo.ClickonClose();
+	Log.endTestCase("VerifyReportProductStat");
+		}
+@Test
+public void VerifyReportStoreStat() throws InterruptedException
+{
+	Log.startTestCase("VerifyReportStoreStat");
+	LogInpage Lp2=new LogInpage();
+	Lp2.ValidLogin();
+	ReportsPage repo=new ReportsPage();
+	repo.ClickOnSelectStore();
+	Thread.sleep(3000);
+	Assert.assertTrue(repo.IsReportStatusPresent());
+	Thread.sleep(3000);
+	repo.ClickonClose();
+	Log.endTestCase("VerifyReportStoreStat");
+		}
+}
+

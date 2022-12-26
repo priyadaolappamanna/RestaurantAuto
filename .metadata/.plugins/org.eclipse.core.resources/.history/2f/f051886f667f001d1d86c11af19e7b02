@@ -1,0 +1,28 @@
+package com.Restaurant.Testcases;
+
+import org.testng.Assert;
+
+import com.Restaurant.Baseclass.BaseClass;
+import com.Restaurant.Pageobjects.HomePage;
+import com.Restaurant.Pageobjects.LogInpage;
+import com.Restaurant.Utilities.Log;
+
+public class VerifyHomePageTest extends BaseClass {
+	
+	public void VerifyLangPage() throws InterruptedException
+	{
+		Log.startTestCase("VerifyHomePageTest");
+		LogInpage Lp3=new LogInpage();
+		Lp3.ValidLogin();
+		HomePage hp=new HomePage();
+		hp.ClickOnFrenchLanguage();
+		//Assert.assertTrue(hp.IsFrenchLanguagePresent(),"French lang is not present");
+		Thread.sleep(3000);
+		hp.ClickOnPortugalLanguage();
+		Log.endTestCase("VerifyHomePageTest");
+		
+		
+	}
+	
+
+}
